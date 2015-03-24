@@ -1,6 +1,6 @@
-# Iterum websie
+# Iterum website setup
 
-The website is based on Jekyll [Jekyll](http://jekyllrb.com/docs/quickstart/), if you want to run the website it is required ruby, and I would like to suggest a linux environment.
+The website is based on [Jekyll](http://jekyllrb.com/docs/quickstart/), if you want to run the website it is required ruby, and I would like to suggest a linux environment.
 
 ## Install rvm (https://rvm.io/)
 ``` bash
