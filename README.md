@@ -15,7 +15,7 @@ The website is based on [Jekyll](http://jekyllrb.com/docs/quickstart/), if you w
 ``` 
 ## Install Jekyll gem
 ``` bash
-  gem install Jekyll
+  gem install jekyll
 ```
 ## Start Jekyll server
 Go to website repository folder, and execute
