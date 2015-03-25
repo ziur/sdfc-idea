@@ -4,7 +4,7 @@ title: Credentials management
 permalink: /docs/credentials/
 ---
 ## 1.1.1 Add credential by console
-* You are able to add a credentials encrypted and credentials decrypted also
+* You are able to add a credentials encrypted and credentials decrypted.
 * If you want to add a credential encrypted you should put option yes in Encrypt credential
 <h5> Output of:  <strong> gradle addCredential </strong></h5>
 
@@ -12,20 +12,20 @@ permalink: /docs/credentials/
 :addCredential
         Press enter to add a credential!!
 > Building 0% > :addCredential
-Id:newId
-UserName(example@email.com):juan@gmail.com
-Password:123qwe
-Token:123qwe456rtyuyihh
-Login type (login/test):login
-Encrypt credential(y/n):y
-        Credential was added successfully!!!!
-
+Id:myId
+UserName(example@email.com):john@email.com
+Password:myPassword
+Token:myToken
+Login type (login/test/instance, by default login):login
+Encrypt credential(y/n, by default is encrypted):y
+:addCredential
+Credential was added successfully
 BUILD SUCCESSFUL
 ```
 
 ## 1.1.2 Add credential by parameters
-#### * When you add credential by parameters it is encrypted
-#### * If you want to add credential by parameters you should use the next parameters:
+ * When you add credential by parameters it is encrypted.
+ * If you want to add credential by parameters you should use the next parameters:
 * -Pid is id of credential
 * -Pusername is your account
 * -Ppassword is your password
@@ -38,26 +38,26 @@ BUILD SUCCESSFUL
 BUILD SUCCESSFUL
 ```
 
-## 1.2.1 Update credential by console
-* You are be able to update a credential you should put id credential to update
+## 1.1.3 Update credential by console
+* You are be able to update a credential you should put id credential to update.
 <h5> Output of:  <strong> gradle updateCredential </strong></h5>
 
 ```bash
 :updateCredential
-        Press enter to update credential!!
-> Building 0% > :updateCredential
-Id credential to update:id
-User typeName:ana@gmail.com
-password: 123456
-toke: qwe345ert123sdsf
-login(dev/test):dev
-        Id credential was updated successfully!!
+id:mine
+UserName(example@email.com):david@email.com
+Password:myPassword
+Token:MyToken
+Login type (login/test/instance, by default login):login
+:updateCredential
+Credential was updated successfully
+BUILD SUCCESSFUL
 
 BUILD SUCCESSFUL
 ```
 
-## 1.2.2 Update credential by parameters
-#### * If you want to update credential by parameters you should use the next parameters:
+## 1.1.4 Update credential by parameters
+ * If you want to update credential by parameters you should use the next parameters:
 * -Pid is id of credential
 * -Pusername is your account
 * -Ppassword is your password
@@ -69,3 +69,5 @@ BUILD SUCCESSFUL
 
 BUILD SUCCESSFUL
 ```
+
+> **Note:** These credentials are added and updated in *credentials.dat* file that is located in user HOME directory.
