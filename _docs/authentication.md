@@ -8,6 +8,7 @@ permalink: /docs/auth/
  You need to authenticate to run tasks using a Sales force account, so you are be able to run task with default credential when you don't write your credential. To do this You should add a new credential with *default* id.
 
 For example when you run the next task you are using a default credential,  You don't need write *'credentialId'* parameter.
+
 <h5> Output of:  <strong> gradle deploy </strong></h5>
 
 ```bash
