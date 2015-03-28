@@ -7,7 +7,8 @@ Iterum Dev Tool Plugin
 =============
 
 This is an open source plugin
-## Plugin Requirements
+
+##  Plugin Requirements
  * Java JDK 1.7
  * Gradle 2.0 or greater
  * Operation System
@@ -20,16 +21,16 @@ This is an open source plugin
  * User account in a Salesforce Organization and the related security token
 
 
-## Tentative files configuration for User
+##  Tentative files configuration for User
 
-### Files Gradle
+###  Files Gradle
 
 * build.gradle has the configuration of gradle for user.
 * gradle.properties has values that build.gradle will use.
 * credentials.dat has all credentials to use
 See below the tentative file
 
-##### build.gradle
+#####  build.gradle
 ```groovy
    buildscript {
        repositories {
@@ -40,13 +41,13 @@ See below the tentative file
            }
        }
        dependencies {
-           classpath 'com.jalasoft.sfdc.devtool:SFDC-Dev-Tool:1.0.62.b13'
+           classpath 'org.jalasoft.gradle.plugins.enforce:enforce-gradle-plugin:1.0.7'
        }
    }
 
-   apply plugin: 'force'
+   apply plugin: 'enforce'
 
-   force {
+   enforce {
        srcPath = 'src'
        standardObjects = ["Account.object"]
        poll = 200 //times
@@ -57,11 +58,11 @@ See below the tentative file
    }
 ```
 
-##### gradle.properties
+#####  gradle.properties
 ```groovy
     credentialId=myCustomId
 ```
-##### credentials.dat
+#####  credentials.dat
 
 ```json
 {
@@ -74,8 +75,9 @@ See below the tentative file
     }
 }
 ```
-## Setup Salesforce organization credentials
 
+
+### Setup Salesforce organization credentials
 
 <div class="note info">
   <h5>Credential support</h5>
