@@ -83,7 +83,7 @@ This is a command:
 
 ### Add credential by console
 
-<h5> Output of:  <strong> gradle addCredential </strong></h5>
+***Output of:*** gradle addCredential
 
 ```bash
 > Building 0% > :addCredential
@@ -100,7 +100,7 @@ BUILD SUCCESSFUL
 
 ### Add credential by parameters
 
-<h5> Output of:  <strong> gradle addCredential -Pid=myidLZ -Pusername=juana@gmail.com -Ppassword=123456 -Ptoken=as:addCredential </strong></h5>
+***Output of:*** gradle addCredential -Pid=myidLZ -Pusername=juana@gmail.com -Ppassword=123456 -Ptoken=as:addCredential
 
 ```bash
 :addCredential
@@ -109,7 +109,7 @@ BUILD SUCCESSFUL
 ```
 ### Update credential by console
 
-<h5> Output of:  <strong> gradle updateCredential </strong></h5>
+***Output of:*** gradle updateCredential
 
 ```bash
 :updateCredential
@@ -125,7 +125,8 @@ BUILD SUCCESSFUL
 
 ### Update credential by parameters
 
-<h5> Output of:  <strong> gradle updateCredential -Pid=myId -Pusername=user@organization.com -Ppassword=myPassword -Ptoken=myToken </strong></h5>
+***Output of:*** gradle updateCredential -Pid=myId -Pusername=user@organization.com
+																  -Ppassword=myPassword -Ptoken=myToken
 
 ```bash
 :updateCredential

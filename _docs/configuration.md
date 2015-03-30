@@ -27,8 +27,7 @@ This is an open source plugin
 
 * build.gradle has the configuration of gradle for user.
 * gradle.properties has values that build.gradle will use.
-* credentials.dat has all credentials to use
-See below the tentative file
+* credentials.dat has all credentials to use.
 
 #####  build.gradle
 ```groovy
@@ -58,11 +57,13 @@ See below the tentative file
    }
 ```
 
-#####  gradle.properties
+##### gradle.properties
+
 ```groovy
     credentialId=myCustomId
 ```
-#####  credentials.dat
+
+##### credentials.dat
 
 ```json
 {
@@ -81,15 +82,18 @@ See below the tentative file
 
 <div class="note info">
   <h5>Credential support</h5>
-  <p>Managing credentials can create and update credentials in *credentials.dat* file it is located in HOME directory, a format was showed in Files gradle that is on last point.</p>
-   <p>* Creates a credential in *credentials.dat* file located in HOME directory it is saved as encrypted by default and its *sfdcType* field is saved with login value.</p>
-   <p>* Updates a credential by key from *credentials.dat* file.</p>
+  <p>Managing credentials can create and update credentials in 'credentials.dat' file it is located in HOME directory, a format was showed in Files gradle that is on last point.</p>
+   <p> Creates a credential in 'credentials.dat' file located in HOME directory it is saved as encrypted by default and its 'sfdcType' field is saved with login value.</p>
+   <p> Updates a credential by key from 'credentials.dat' file.</p>
 </div>
+
 
 > **Note:** Notice that the example uses the "default" key which by convention is the one to be used by default when a task is executed. You can have several entries to different salesforce accounts but each entry needs to have an unique key.
 
 ## Project gradle tasks
+
 The gradle project contains tasks that will help on development and packaging.
+
 > **Note:** You have to execute the gradle tasks from the project directory it will shows you All tasks runnable from root project.
 
 ### Build Setup tasks

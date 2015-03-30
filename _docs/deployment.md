@@ -14,7 +14,7 @@ All code will be deployed to organization using a smart deploy that mean when ex
 
 	a) First step is truncate the next elements and deploy it.
 
-		- Classes
+	    - Classes
 	    - Objects
 	    - Triggers
 	    - Components
@@ -48,26 +48,26 @@ User can deploy code excluding some files using **excludes** parameter.
 
  ***by folders*** if you want to exclude a folder or folders, You should write the next parameter:
 
-			gradle deploy -Pexcludes=classes
-		    gradle deploy -Pexcludes=classes,objects.
+    gradle deploy -Pexcludes=classes
+    gradle deploy -Pexcludes=classes,objects.
 
  ***by files*** if you want to exclude a file or files, You should write the next parameter:
 
-			gradle deploy -Pexcludes=classes/Class1.cls
+    gradle deploy -Pexcludes=classes/Class1.cls
 
  ***using wildcard*** if you want to exclude using wildcard, You should write the next parameter:
 
-			gradle deploy  -Pexcludes=classes/**
-		    gradle deploy  -Pexcludes=objects/*.object
-		    gradle deploy  -Pexcludes=**/*Account*/**
-		    gradle deploy  -Pexcludes=**/*.cls
+    gradle deploy  -Pexcludes=classes/**
+    gradle deploy  -Pexcludes=objects/*.object
+    gradle deploy  -Pexcludes=**/*Account*/**
+    gradle deploy  -Pexcludes=**/*.cls
 
 ## 3.1.3 Examples:
 
 ### Without parameters
 
 Once this task is executed without ***folders*** parameter it deploys all code into an organization.
-<h5> Output of:  <strong> gradle deploy</strong></h5>
+***Output of:***  gradle deploy
 
 ```bash
     :deploy
@@ -90,7 +90,7 @@ Once this task is executed without ***folders*** parameter it deploys all code i
 ### Using folders parameters
 
 You can choose folders that will be deployed.
-<h5> Output of:  <strong> gradle deploy -Pfolders=classes,triggers</strong></h5>
+***Output of:***  gradle deploy -Pfolders=classes,triggers
 
 ```bash
     :deploy
@@ -108,7 +108,7 @@ You can choose folders that will be deployed.
 
 ### Using excludes parameters
 This command deploys all files from your local respository excluding classes.
-<h5> Output of:  <strong> gradle deploy -Pexcludes=classes</strong></h5>
+***Output of:***  gradle deploy -Pexcludes=classes
 
 ```bash
     :deploy
@@ -129,7 +129,7 @@ This command deploys all files from your local respository excluding classes.
 ```
 
 This command deploys all code excluding Class1.cls
-<h5> Output of:  <strong> gradle deploy -Pexcludes=classes/Class1.cls</strong></h5>
+***Output of:***  gradle deploy -Pexcludes=classes/Class1.cls
 
 ```bash
     :deploy
@@ -149,7 +149,7 @@ This command deploys all code excluding Class1.cls
     BUILD SUCCESSFUL
 ```
 This command deploys all code excluding a folder class.
-<h5> Output of:  <strong> gradle deploy -Pexcludes=classes/**</strong></h5>
+***Output of:***  gradle deploy -Pexcludes=classes/**
 
 ```bash
     :deploy
@@ -211,26 +211,26 @@ User can deploy code excluding some files using **excludes** parameter.
 
  ***by folders*** if you want to exclude a folder or folders, You should write the next parameter:
 
-			gradle upload -Pexcludes=classes
-		    gradle upload -Pexcludes=classes,objects.
+        gradle upload -Pexcludes=classes
+        gradle upload -Pexcludes=classes,objects.
 
  ***by files*** if you want to exclude a file or files, You should write the next parameter:
 
-			gradle upload -Pexcludes=classes/Class1.cls
+        gradle upload -Pexcludes=classes/Class1.cls
 
  ***using wildcard*** if you want to exclude using wildcard, You should write the next parameter:
 
-			gradle upload  -Pexcludes=classes/**
-		    gradle upload  -Pexcludes=objects/*.object
-		    gradle upload  -Pexcludes=**/*Account*/**
-		    gradle upload  -Pexcludes=**/*.cls
+        gradle upload  -Pexcludes=classes/**
+        gradle upload  -Pexcludes=objects/*.object
+        gradle upload  -Pexcludes=**/*Account*/**
+        gradle upload  -Pexcludes=**/*.cls
 
 ##  3.2.3 Examples:
 
 ### Without parameters
 When you run this command all files are uploaded to organization.
 
-<h5> Output of:  <strong>gradle upload</strong></h5>
+***Output of:*** gradle upload
 
 ```bash
     :upload
@@ -249,7 +249,7 @@ When you run this command all files are uploaded to organization.
 ### Using files parameter
 
 This command just uploads classes and triggers files.
-<h5> Output of:  <strong>gradle upload -Pfiles=classes,triggers</strong></h5>
+***Output of:***  gradle upload -Pfiles=classes,triggers
 
 ```bash
     :upload
@@ -269,7 +269,7 @@ This command just uploads classes and triggers files.
 
 
 This command uploads class1.cls and trigger1.trigger
-<h5> Output of:  <strong>gradle upload -Pfiles=classes/class1.cls,triggers/trigger1.trigger</strong></h5>
+***Output of:***  gradle upload -Pfiles=classes/class1.cls,triggers/trigger1.trigger
 
 ```bash
     :upload
@@ -289,7 +289,7 @@ This command uploads class1.cls and trigger1.trigger
 
 This command uploads Class1.cls and all triggers and all obejcts.
 
-<h5> Output of:  <strong>gradle upload -Pfiles=classes/Class1.cls,triggers,objects</strong></h5>
+***Output of:***  gradle upload -Pfiles=classes/Class1.cls,triggers,objects
 
 ```bash
     :upload
@@ -307,7 +307,7 @@ This command uploads Class1.cls and all triggers and all obejcts.
 ```
 
 This command uploads all classes all triggers and all obejcts.
-<h5> Output of:  <strong>gradle upload -Pfiles=classes/**,triggers,objects</strong></h5>
+***Output of:***  gradle upload -Pfiles=classes/**,triggers,objects
 
 ```bash
     :upload
@@ -327,7 +327,7 @@ This command uploads all classes all triggers and all obejcts.
 ### Using excludes parameter
 
 This commando uploads all files excluding all classes.
-<h5> Output of:  <strong> gradle upload -Pexcludes=classes</strong></h5>
+***Output of:***  gradle upload -Pexcludes=classes
 
 ```bash
     > gradle upload
@@ -344,7 +344,7 @@ This commando uploads all files excluding all classes.
      BUILD SUCCESSFUL
 ```
 This command uploads all files excluding Class1.cls
-<h5> Output of:  <strong> gradle upload -Pexcludes=classes/Class1.cls</strong></h5>
+***Output of:***   gradle upload -Pexcludes=classes/Class1.cls
 
 ```bash
     > gradle upload
@@ -361,7 +361,7 @@ This command uploads all files excluding Class1.cls
     BUILD SUCCESSFUL
 ```
 This command uploads all files excluding all classes.
-<h5> Output of:  <strong> gradle upload -Pexcludes=classes/**</strong></h5>
+***Output of:***  gradle upload -Pexcludes=classes/**
 
 ```bash
     > gradle upload
@@ -377,6 +377,7 @@ This command uploads all files excluding all classes.
 
     BUILD SUCCESSFUL
 ```
+
 ## 3.2.4 Limitations of Upload task
 
 *	***files*** parameter doesn't support absolute paths.

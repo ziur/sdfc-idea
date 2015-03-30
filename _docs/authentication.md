@@ -3,10 +3,10 @@ layout: docs
 title: Authentication
 permalink: /docs/auth/
 ---
-## 2.1.1 Authentication to run tasks:
+## 2.1.1 Authentication to run tasks
 
 #### **Objective**
-To run deployment tasks you need log in into your organization for so you have three options to authentication:
+To run deployment tasks you need login into your organization for so you have three options to authentication:
 
 * Using a credential by default, for so you should add a credential with default id.
 * Using an specific credential for so you should use credential id.
@@ -41,7 +41,8 @@ You are able to run task using parameters of credential, to do this you should s
 ## Examples:
 
 ### Using a credential by default
-<h5> Output of:  <strong> gradle deploy </strong></h5>
+
+***Output of:***  gradle deploy
 
 ```bash
     :deploy
@@ -61,7 +62,7 @@ You are able to run task using parameters of credential, to do this you should s
 
 ### Using an specific credential
 
-<h5> Output of:  <strong> gradle deploy -PcredentialId=myId </strong></h5>
+***Output of:***  gradle deploy -PcredentialId=myId
 
 ```bash
     :deploy
@@ -81,7 +82,7 @@ You are able to run task using parameters of credential, to do this you should s
 
 ### Using parameters
 
-<h5> Output of:  <strong> gradle deploy -Pusername=juan.perez@jalasoft.com -Ppassword=123qweJuan -Ptoken=qweyh65fd43789sw </strong></h5>
+***Output of:***  gradle deploy -Pusername=juan.perez@jalasoft.com -Ppassword=123qweJuan -Ptoken=qweyh65fd43789sw
 
 ```bash
     :deploy
