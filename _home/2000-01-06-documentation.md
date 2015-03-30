@@ -6,11 +6,11 @@ color: white
 fa-icon: book
 ---
 
-## All the documentation is available **[here](/docs/home)**
+## All the documentation is available **[here]({{site.baseurl}}/docs/home)**
 
 Below you have links to most important ones:
-  * [Quick start](docs/quickstart/)
-  * [Installation](docs/installation/)
-  * [Task list](docs/tasks/)
-  * [Articles](docs/articles/)
-  * [Development](docs/development/)
+  * [Quick start]({{site.baseurl}}/docs/quickstart/)
+  * [Installation]({{site.baseurl}}/docs/installation/)
+  * [Task list]({{site.baseurl}}/docs/tasks/)
+  * [Articles]({{site.baseurl}}/docs/articles/)
+  * [Development]({{site.baseurl}}/docs/development/)
