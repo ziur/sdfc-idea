@@ -1,7 +1,7 @@
 ---
 layout: docs
 title: Welcome
-permalink: docs/home/
+permalink: /docs/home/
 ---
 
 Here you can find a comprenhensive guide to EnForce tools for Salesforce, which will guide you on the process to have a Gradle script that can help you on tasks related to develop an application on Salesforce platform.

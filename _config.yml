@@ -18,8 +18,8 @@ relative_permalinks: true
 title:            EnForce
 tagline:          'EnForce tools for Salesforce'
 description:      'EnForce tools for Salesforce that helps on development and Continuous Integration for Salesforce projects.'
-url:              "http://ziur.github.io"
-baseurl:          "/sdfc-idea/"
+url:              "http://ziur.github.io/sdfc-idea"
+baseurl:          "/"
 author:
   name:           'Jalasoft Inc.'
   url:            https://twitter.com/jalasoft

@@ -1,7 +1,7 @@
 ---
 layout: docs
 title: Quick start
-permalink: docs/quickstart/
+permalink: /docs/quickstart/
 ---
 
 Here you can find the enought required information to have running a Gradle project with EnForce, if you are interested on develop new features or just compile and package the source code, you will have helpful information at [Development](/docs/development) page
