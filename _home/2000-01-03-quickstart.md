@@ -1,7 +1,7 @@
 ---
 title: "quickstart"
 id: "quickstart"
-bg: orange
+bg: green2
 color: black
 fa-icon: toggle-on
 ---
@@ -36,5 +36,5 @@ apply plugin: 'force'
    #=> Retrieves all the classes from a Salesforce organization
 {% endhighlight %}
 
-Now you can start using all the Iterum features reviwing the [Documentation](/docs/home).
+Now you can start using all the EnForce features reviwing the [Documentation](/docs/home).
 

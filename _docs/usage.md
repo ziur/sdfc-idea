@@ -4,7 +4,7 @@ title: Basi usage
 permalink: /docs/usage/
 ---
 
-Once you have a Gradle script file as part of your project, you can start using the available tasks provided by Iterum. You can use the tasks from command line or configuring custom tasks on your Gradle file.
+Once you have a Gradle script file as part of your project, you can start using the available tasks provided by EnForce. You can use the tasks from command line or configuring custom tasks on your Gradle file.
 
 ## Executing tasks on Command line
 All the tasks follow the next convention:

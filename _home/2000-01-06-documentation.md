@@ -6,5 +6,11 @@ color: white
 fa-icon: book
 ---
 
-- You can find information about the available tasks on the [Documentation](/docs/home)
-- Don't forget to review the latest posts which useful information about use cases using the Iterum tool
+## All the documentation is available **[here](/docs/home)**
+
+Below you have links to most important ones:
+  * [Quick start](docs/quickstart/)
+  * [Installation](docs/installation/)
+  * [Task list](docs/tasks/)
+  * [Articles](docs/articles/)
+  * [Development](docs/development/)

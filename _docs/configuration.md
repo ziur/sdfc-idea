@@ -3,7 +3,7 @@ layout: docs
 title: Configuration
 permalink: /docs/configuration/
 ---
-Iterum Dev Tool Plugin
+EnForce Dev Tool Plugin
 =============
 
 This is an open source plugin

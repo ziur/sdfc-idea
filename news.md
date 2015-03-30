@@ -2,7 +2,6 @@
 layout: page
 title: News
 ---
-
 <div class="home">
 
   <h1 class="page-heading">Posts</h1>

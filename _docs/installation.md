@@ -12,7 +12,7 @@ permalink: /docs/installation/
  * Valid user account in a Salesforce Organization and the related [Security Token](https://help.salesforce.com/apex/HTViewHelpDoc?id=user_security_token.htm)
 
 ## Create a build.gradle file for your project
-Iterum is a Gradle plugin, so it is required to have build.gradle file where is defined the dependency to the Iterum plugin, and makes possible to start using Iterum features. Below you can find an example for a basic build.gradle file:
+EnForce is a Gradle plugin, so it is required to have build.gradle file where is defined the dependency to the EnForce plugin, and makes possible to start using EnForce features. Below you can find an example for a basic build.gradle file:
 
 {% highlight groovy %}
    buildscript {
@@ -29,7 +29,7 @@ Iterum is a Gradle plugin, so it is required to have build.gradle file where is 
 {% endhighlight %}
 
 ## Just a file, where is the program?
-Gradle provides a dependency mechanism which allows download Gradle plugins and its dependencies from a Maven Repository, the first time that a tasks from the build.gradle is executed, Gradle will automatically download the Iterum plugin and its dependecies, which will be stored in a cache in your machine, this mechanism avoids to download several times the same files.
+Gradle provides a dependency mechanism which allows download Gradle plugins and its dependencies from a Maven Repository, the first time that a tasks from the build.gradle is executed, Gradle will automatically download the EnForce plugin and its dependecies, which will be stored in a cache in your machine, this mechanism avoids to download several times the same files.
 
 You can try executing the next command:
 
@@ -39,9 +39,9 @@ You can try executing the next command:
 
 
 ## Setup Salesforce organization credentials
-Iterum requires access to a Salesforce Organization, so you need to provide the credentials and [Security Token](https://help.salesforce.com/apex/HTViewHelpDoc?id=user_security_token.htm) for an user with System Administrator rights.
+EnForce requires access to a Salesforce Organization, so you need to provide the credentials and [Security Token](https://help.salesforce.com/apex/HTViewHelpDoc?id=user_security_token.htm) for an user with System Administrator rights.
 
-Iterum provides a task for create credentials, which are stored on your home folder and can be encrypted also.
+EnForce provides a task for create credentials, which are stored on your home folder and can be encrypted also.
 
 {% highlight bash %}
    $ gradle addCredentials
@@ -50,9 +50,9 @@ Iterum provides a task for create credentials, which are stored on your home fol
 The task will ask for the credential values to be introduced, the _Id_ represents the key that is used to identify the credential, in this way it is possible to store credentials for several organizations but you need to keep in mind that the _Id_ must be unique. You can find [here](/docs/credentials/) more information about Credential Management.
 
 
-## Integrate your Salesforce project with Iterum
-The easy way to integrate Iterum with your Salesforce project source code is making the build.gradle file part of your source code, that means move the build.gradle file to your project folder. 
-Now, you can configure on Iterum the path of your project code, open your build.gradle file and add the next lines at the end: 
+## Integrate your Salesforce project with EnForce
+The easy way to integrate EnForce with your Salesforce project source code is making the build.gradle file part of your source code, that means move the build.gradle file to your project folder. 
+Now, you can configure on EnForce the path of your project code, open your build.gradle file and add the next lines at the end: 
 
 {% highlight groovy %}
 
@@ -81,7 +81,7 @@ In this case, the _src_ property is pointing to the _source_ folder, which conta
 
 By default, the _src_ property points to the build.gradle folder.
 
-You can list the available tasks provided by Iterum executing:
+You can list the available tasks provided by EnForce executing:
 {% highlight bash %}
    $ gradle tasks
 {% endhighlight %}

@@ -1,8 +1,6 @@
 
 
-Design by Tim O'Brien [t413.com](http://t413.com/)
+Jalasoft - Jalasoft Foundation 2015
 &mdash;
-[SinglePaged theme](https://github.com/t413/SinglePaged)
-&mdash;
-this site is [open source]({{ site.source_link }})
+Jekyll theme based on this site is [SinglePaged]({{ site.theme_link }})
 
