@@ -13,7 +13,7 @@ To management your credentials there are two files called credentials.dat locate
 ***username*** is a SalesForce account.
 ***password*** is your SalesForce password
 ***token*** is your SalesForce token
-***sfdcType *** is a login type.
+***sfdcType*** is a login type.
 ***type*** is define if your credential is encrypted or no.
 
 ### credentials.dat file
@@ -81,7 +81,7 @@ This is a command:
 
 ## 1.1.3 Examples
 
-### Add credential by console:
+### Add credential by console
 
 <h5> Output of:  <strong> gradle addCredential </strong></h5>
 
@@ -98,7 +98,7 @@ Encrypt credential(y/n, by default is encrypted):y
 BUILD SUCCESSFUL
 ```
 
-### Add credential by parameters:
+### Add credential by parameters
 
 <h5> Output of:  <strong> gradle addCredential -Pid=myidLZ -Pusername=juana@gmail.com -Ppassword=123456 -Ptoken=as:addCredential </strong></h5>
 
@@ -107,7 +107,7 @@ BUILD SUCCESSFUL
 
 BUILD SUCCESSFUL
 ```
-### Update credential by console:
+### Update credential by console
 
 <h5> Output of:  <strong> gradle updateCredential </strong></h5>
 
@@ -123,7 +123,7 @@ Credential was updated successfully
 BUILD SUCCESSFUL
 ```
 
-### Update credential by parameters:
+### Update credential by parameters
 
 <h5> Output of:  <strong> gradle updateCredential -Pid=myId -Pusername=user@organization.com -Ppassword=myPassword -Ptoken=myToken </strong></h5>
 
