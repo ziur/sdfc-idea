@@ -78,7 +78,7 @@ When the undeploy task is executed all interceptors by default will be executed.
 
 ```bash
 
-force {
+enforce {
     globalInterceptor('classes','printClassName', { class->
         println file.name
     })
@@ -153,32 +153,38 @@ This parameter can exclude files by:
 ### **Using excludes parameter:**
 To exclude all classes.
 
-	gradle undeploy -Pexcludes=classes
-	gradle undeploy -Pexcludes=classes/**
-	gradle undeploy -Pexcludes=classes/*.cls
+	$ gradle undeploy -Pexcludes=classes
+	$ gradle undeploy -Pexcludes=classes/**
+	$ gradle undeploy -Pexcludes=classes/*.cls
 
 To exclude all classes all objects and all triggers.
 
-	gradle undeploy -Pexcludes=classes,objects,triggers
+	$ gradle undeploy -Pexcludes=classes,objects,triggers
 
 To exclude the Class1.cls
 
-	gradle undeploy -Pexcludes=classes/Class1.cls
+	$ gradle undeploy -Pexcludes=classes/Class1.cls
 
 To exclude Class1.cls and Trigger1.cls
 
-	gradle undeploy -Pexcludes=classes/Class1.cls,triggers/Trigger1.trigger
+	$ gradle undeploy -Pexcludes=classes/Class1.cls,triggers/Trigger1.trigger
 
 To exclude all files that contain Account word with any extension and any folders.
 
-	gradle undeploy -Pexcludes=**\*Account*/**
+	$ gradle undeploy -Pexcludes=**\*Account*/**
 
 To exclude all files with  **.cls** extension.
 
-	gradle undeploy -Pexcludes=**/*.cls
+	$ gradle undeploy -Pexcludes=**/*.cls
 
 
 ###  **Using interceptors by default:**
+
+command:
+
+	$ gradle undeploy
+
+output:
 
 ```bash
     > gradle undeploy

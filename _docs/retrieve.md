@@ -4,77 +4,94 @@ title: Retrieve code
 permalink: /docs/retrieve/
 ---
 ## Retrieve group has the next task:
-## 6.1 Task retrieve
-### 6.1.1 gradle retrieve -Pfiles=...
-#### This task retrieve the files that we want retrieve, that means that we can recover a file o many specific files from the organization
-#### This task must have the parameter "files" following the next format
-        gradle retrieve -Pfiles=(files to recover)
-#### the files to recover has to follow the a format
-* first: the folder which content the file such us classes,triggers,etc.
-* second: the name of the file. see the example
-        gradle retrieve -Pfiles=classes/Class1.cls,triggers/trigger1.trigger
-#### we can add many files as we want
-#### So let's execute the command: gradle retrieve -Pfiles=classes/Class1.cls,triggers/trigger1.trigger
-<h5> Output of:  <strong> gradle retrieve -Pfiles=classes/Class1.cls,triggers/trigger1.trigger </strong></h5>
+## 6.1 Retrieve task
 
-```bash
-    :retrieve
-    ___________________________________________
-            Username: juan.perez@mail.com
-            Login type: login
-    ___________________________________________
+#### **Objective**
+This task download files from your organization, based in your package xml, if there isn't this file, it downloads files by default:
 
-    Starting retrieve...
-    Waiting for retrieve result...
-    Retrieve result completed
-
-    BUILD SUCCESSFUL
-```
-#### If some file has not been founded console will show WARNINGS MESSAGES, for example we can change the name Class1.cls to class1.cls (lowercase).
-#### the result will be like this:
-<h5> Output of:  <strong> gradle retrieve -Pfiles=classes/class1.cls </strong></h5>
-
-```bash
-    :retrieve
-    ___________________________________________
-            Username: juan.perez@mail.com
-            Login type: login
-    ___________________________________________
-
-    Starting retrieve...
-    Waiting for retrieve result...
-    Retrieve result completed
-    WARNING: Entity of type 'ApexClass' named 'class1' cannot be found
-
-    BUILD SUCCESSFUL
-```
-### 6.1.2 Retrieve files without package xml file
-#### This task retrieves all the content into 'src' directory if there isn't a package xml file
-#### If there are files into 'src' directory they are overwrite.
-#### by default the folders selected are:
 * objects
 * staticresources
 * classes
 * pages
 * triggers
 * components
-#### we can set those values for ONLY THE FOLDERS that we want to retrieve.
-#### The only thing that we have to do is:
+
+If you don't have a package xml and you want to download only classes and triggers you should use the next task property into your build.gradle:
+
+	foldersToDownload = "classes,triggers"
+
+#### **Parameters**
+
+This task have two parameters called ***files*** and ***destination*** , where the first parameter is used to download an specifics files it supports files and folders, another one is used to indicate destination of files that will download.
+
+## 6.1.1 Executing Retrieve task
+
+### Without parameters
+
+Once retrieve task is executed without parameters It uses package xml to retrieve files from your organization.
+
+	$ gradle retrieve
+
+### Without package xml file
+
+Once retrieve task is executed and there isn't a package xml it retrieve files by default:
+
+* objects
+* staticresources
+* classes
+* pages
+* triggers
+* components
+
+We can set those values for ONLY THE FOLDERS that we want to retrieve.
+The only thing that we have to do is:
 
 * change in the build.gradle file, the line with the next content
 ```text
         //foldersToDownload = "classes,pages"
 ```
-  currently it is commented, quit the comment and leave only
+ * currently it is commented, quit the comment and leave only
 ```text
         foldersToDownload = "classes,pages"
 ```
-  this means that folders which will be retrieved are classes and pages, yo can add folders as you want to recover them
+ * this means that folders which will be retrieved are classes and pages, yo can add folders as you want to recover them
 ```text
         foldersToDownload = classes,triggers,pages...
 ```
-#### So let's execute the command: gradle retrieve
-<h5> Output of:  <strong> gradle retrieve </strong></h5>
+
+### Using files parameter
+This task retrieve the files that we want retrieve, that means that we can recover a file o many specific files from the organization. This parameter support files and folders.
+
+      $ gradle retrieve -Pfiles=classes/Class1.cls
+      $ gradle retrieve -Pfiles=classes/Class1.cls,objects/Account.object
+      $ gradle retrieve -Pfiles=objects
+      $ gradle retrieve -Pfiles=objects,triggers
+
+You can add many files or folders as we want.
+
+### Using destination parameter
+
+This task retrieve the files that we want retrieve and download in specific folder, that means that we can recover a file, folders o many specific files from the organization in specific folder.
+
+    $ gradle retrieve -Pfiles=classes,objects -Pdestination=relative/path
+    $ gradle retrieve -Pfiles=classes/Class.cls -Pdestination=absolute/path
+
+When you use a destination parameter you are able to use relative or absolute path.
+
+
+>***Notes:***
+>Once that task is executed successfully all the files are copied inside the source folder replacing the existing files.
+>If we want recover only the files retrieved we can find them on build folder as a zip file with the name zipRecovered.zip
+
+## 6.1. Examples
+
+
+### Without parameters
+command:
+
+	$ gradle retrieve
+
+output:
 
 ```bash
     :retrieve
@@ -91,8 +108,73 @@ permalink: /docs/retrieve/
     Retrieve result completed
 
     BUILD SUCCESSFUL
-
 ```
 
-#### Once that task is executed successfully all the files are copied inside the source folder replacing the existing files.
-#### If we want recover only the files retrieved we can find them on build folder as a zip file with the name zipRecovered.zip
+### Using files parameter
+
+command:
+
+	$ gradle retrieve -Pfiles=classes/Class1.cls,triggers/trigger1.trigger
+output:
+
+```bash
+    :retrieve
+    ___________________________________________
+            Username: juan.perez@mail.com
+            Login type: login
+    ___________________________________________
+
+    Starting retrieve...
+    Waiting for retrieve result...
+    Retrieve result completed
+
+    BUILD SUCCESSFUL
+```
+
+
+### Using destination parameter
+
+command:
+
+	 $ gradle retrieve -Pfiles=pages,components,classes/Class1.cls,
+	                   triggers/trigger1.trigger -Pdestination=relative/path
+
+output:
+
+```bash
+    :retrieve
+    ___________________________________________
+            Username: juan.perez@mail.com
+            Login type: login
+    ___________________________________________
+
+    Starting retrieve...
+    Waiting for retrieve result...
+    Retrieve result completed
+
+	BUILD SUCCESSFUL
+```
+
+command:
+
+	$ gradle retrieve -Pfiles=classes/class1.cls
+
+output:
+
+```bash
+    :retrieve
+    ___________________________________________
+            Username: juan.perez@mail.com
+            Login type: login
+    ___________________________________________
+
+    Starting retrieve...
+    Waiting for retrieve result...
+    Retrieve result completed
+    WARNING: Entity of type 'ApexClass' named 'class1' cannot be found
+
+    BUILD SUCCESSFUL
+```
+
+>***Note:***
+> If some file has not been founded console will show WARNINGS MESSAGES, for example we can change the name Class1.cls to class1.cls (lowercase).

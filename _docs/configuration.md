@@ -3,33 +3,38 @@ layout: docs
 title: Configuration
 permalink: /docs/configuration/
 ---
-EnForce Dev Tool Plugin
+Enforce Dev Tool Plugin
 =============
 
 This is an open source plugin
 
-##  Plugin Requirements
- * Java JDK 1.7
- * Gradle 2.0 or greater
- * Operation System
-       a) Windows 7
-       b) Linux Ubuntu
-       c) Mac OS
- * build.gradle file
- * gradle.properties file (Optional)
- * credentials.dat file
- * User account in a Salesforce Organization and the related security token
+## Plugin Requirements
+<ol>
+	<ul>
+		<li> Java JDK 1.7</li>
+		<li> Gradle 2.0 or greater</li>
+	    <li> Operation System:</li>
+			<ul>
+				<li>Windows 7</li>
+				<li>Linux Ubuntu</li>
+				<li>Mac OS</li>
+			</ul>
+		<li> build.gradle file </li>
+		<li> gradle.properties file (Optional) </li>
+		<li> credentials.dat file </li>
+		<li> User account in a Salesforce Organization and the related security token </li>
+   </ul>
+</ol>
 
+## Tentative files configuration for User
 
-##  Tentative files configuration for User
-
-###  Files Gradle
+### Files Gradle
 
 * build.gradle has the configuration of gradle for user.
 * gradle.properties has values that build.gradle will use.
 * credentials.dat has all credentials to use.
 
-#####  build.gradle
+##### build.gradle
 ```groovy
    buildscript {
        repositories {
@@ -57,13 +62,13 @@ This is an open source plugin
    }
 ```
 
-##### gradle.properties
+#####  gradle.properties
 
 ```groovy
     credentialId=myCustomId
 ```
 
-##### credentials.dat
+#####  credentials.dat
 
 ```json
 {
@@ -77,8 +82,7 @@ This is an open source plugin
 }
 ```
 
-
-### Setup Salesforce organization credentials
+<h3> <strong>Setup Salesforce organization credentials </strong></h3>
 
 <div class="note info">
   <h5>Credential support</h5>
@@ -92,9 +96,12 @@ This is an open source plugin
 
 ## Project gradle tasks
 
-The gradle project contains tasks that will help on development and packaging.
+The gradle project contains tasks that will help on development and packaging. You have to execute the gradle tasks from the project directory it will shows you All tasks runnable from root project.
 
-> **Note:** You have to execute the gradle tasks from the project directory it will shows you All tasks runnable from root project.
+command:
+
+	$ gradle tasks
+output:
 
 ### Build Setup tasks
 

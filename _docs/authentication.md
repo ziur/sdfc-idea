@@ -7,10 +7,11 @@ permalink: /docs/auth/
 
 #### **Objective**
 To run deployment tasks you need login into your organization for so you have three options to authentication:
-
-* Using a credential by default, for so you should add a credential with default id.
-* Using an specific credential for so you should use credential id.
-* Using parameters as username, password and token.
+<ul>
+	<li>Using a credential by default, for so you should add a credential with default id.</li>
+	<li>Using an specific credential for so you should use credential id.</li>
+	<li>Using parameters as username, password and token.</li>
+</ul>
 
 #### **Parameter**
 
@@ -23,26 +24,31 @@ You are able to run task with a credential by default when you don't write your 
 
 For example when you run the next task you are using a credential default,  You don't need write *'credentialId'* parameter.
 
-	gradle deploy
-	gradle undeploy
+	$ gradle deploy
+	$ gradle undeploy
 
 ### Using a specific credential
 You are able to run tasks using credential id, in this case I have a credential in *'credentials.dat'* file with an id called *'myId'*
 
-	gradle deploy -PcredentialId=myId
-	gradle undeploy -PcredentialId=myId
+	$ gradle deploy -PcredentialId=myId
+	$ gradle undeploy -PcredentialId=myId
 
 ### Using parameters
 You are able to run task using parameters of credential, to do this you should send the next parameter: *username, password and token*.
 
-	gradle deploy -Pusername=juan.perez@jalasoft.com -Ppassword=123qweJuan
-								    -Ptoken=qweyh65fd43789sw
+	$ gradle deploy -Pusername=juan.perez@jalasoft.com
+					-Ppassword=123qweJuan
+					-Ptoken=qweyh65fd43789sw
 
 ## Examples:
 
 ### Using a credential by default
 
-***Output of:***  gradle deploy
+command:
+
+	$ gradle deploy
+
+output:
 
 ```bash
     :deploy
@@ -62,7 +68,11 @@ You are able to run task using parameters of credential, to do this you should s
 
 ### Using an specific credential
 
-***Output of:***  gradle deploy -PcredentialId=myId
+command:
+
+	$ gradle deploy -PcredentialId=myId
+
+output:
 
 ```bash
     :deploy
@@ -82,7 +92,13 @@ You are able to run task using parameters of credential, to do this you should s
 
 ### Using parameters
 
-***Output of:***  gradle deploy -Pusername=juan.perez@jalasoft.com -Ppassword=123qweJuan -Ptoken=qweyh65fd43789sw
+command:
+
+	$ gradle deploy -Pusername=juan.perez@jalasoft.com
+					-Ppassword=123qweJuan
+					-Ptoken=qweyh65fd43789sw
+
+output:
 
 ```bash
     :deploy

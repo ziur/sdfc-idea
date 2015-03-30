@@ -4,7 +4,7 @@ title: Quick start
 permalink: /docs/quickstart/
 ---
 
-Here you can find the enought required information to have running a Gradle project with EnForce, if you are interested on develop new features or just compile and package the source code, you will have helpful information at [Development](/docs/development) page
+Here you can find the enought required information to have running a Gradle project with Enforce, if you are interested on develop new features or just compile and package the source code, you will have helpful information at [Development](/docs/development) page
 
 1. Create build.gradle file on your source code project, below you have an example
 
@@ -15,11 +15,11 @@ Here you can find the enought required information to have running a Gradle proj
            mavenCentral()
        }
        dependencies {
-           classpath 'com.jalasoft.sfdc.devtool:SFDC-Dev-Tool:1.0.0'
+           classpath 'org.jalasoft.gradle.plugins.enforce:enforce-gradle-plugin:1.0.7'
        }
    }
-   
-   apply plugin: 'force'
+
+   apply plugin: 'enforce'
 {% endhighlight %}
 
 2. Register a Salesforce credential to be used
@@ -32,4 +32,4 @@ Here you can find the enought required information to have running a Gradle proj
    $> gradle retrieve -Pfiles=classes
 {% endhighlight %}
 
-Now you can start using all the EnForce features.
+Now you can start using all the Enforce features.

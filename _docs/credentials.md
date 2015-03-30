@@ -8,15 +8,18 @@ permalink: /docs/credentials/
 To deploy code into an organization you need a credential, for so you should create an account in SalesForce.
 
 To management your credentials there are two files called credentials.dat located one in your project directory another one in user home directory where your credentials are saved as json format with the next fields:
+<ol>
+	<ul>
+		<li><strong>id</strong> is necessary to management your credential.</li>
+		<li><strong>username</strong> is a SalesForce account.</li>
+		<li><strong>password</strong> is your SalesForce password</li>
+		<li><strong>token</strong> is your SalesForce token</li>
+		<li><strong>sfdcType</strong> is a login type.</li>
+		<li><strong>type</strong> is define if your credential is encrypted or no.</li>
+	</ul>
+</ol>
 
-***id*** is necessary to management your credential.
-***username*** is a SalesForce account.
-***password*** is your SalesForce password
-***token*** is your SalesForce token
-***sfdcType*** is a login type.
-***type*** is define if your credential is encrypted or no.
-
-### credentials.dat file
+### **credentials.dat file**
 ```json
 {
  "default": {
@@ -29,6 +32,8 @@ To management your credentials there are two files called credentials.dat locate
 }
 ```
 
+In this file is saved all credentials with respective fields. It should be located into project directory or user home directory as priority use file that is in project directory.
+
 ## 1.1.2 AddCredential task
 
 This task adds a new credential into credentials.dat located in user home directory. There are two ways to add credentials one is by console another one is by parameters.
@@ -38,7 +43,7 @@ You are able to add credentials encrypted and credentials decrypted. If you want
 
 To add a new credential you should write the next command:
 
-	gradle addCredential
+	$ gradle addCredential
 
 ### By parameters
 When you add credential by parameters it is encrypted by default. To add a new credential by parameter you should use the next parameters:
@@ -50,8 +55,8 @@ When you add credential by parameters it is encrypted by default. To add a new c
 
 The command to add is:
 
-	gradle addCredential -Pid=myidLZ -Pusername=juana@gmail.com
-	                     -Ppassword=123456 -Ptoken=as:addCredential
+	$ gradle addCredential -Pid=myidLZ -Pusername=juana@gmail.com
+	                       -Ppassword=123456 -Ptoken=as:addCredential
 
 
 
@@ -62,7 +67,7 @@ This task update a credential from credentials.dat file located in user home dir
 
 To update a credential by console you should write  the next command and filling credentials fields.
 
-	gradle updateCredential
+	$ gradle updateCredential
 
 
 ### By parameters
@@ -75,15 +80,19 @@ If you want to update credential by parameters you should use the next parameter
 
 This is a command:
 
-	gradle updateCredential -Pid=myId -Pusername=user@organization.com
-	                        -Ppassword=myPassword -Ptoken=myToken
+	$ gradle updateCredential -Pid=myId -Pusername=user@organization.com
+	                          -Ppassword=myPassword -Ptoken=myToken
 
 
 ## 1.1.3 Examples
 
 ### Add credential by console
 
-***Output of:*** gradle addCredential
+command:
+
+	$ gradle addCredential
+
+output:
 
 ```bash
 > Building 0% > :addCredential
@@ -100,7 +109,12 @@ BUILD SUCCESSFUL
 
 ### Add credential by parameters
 
-***Output of:*** gradle addCredential -Pid=myidLZ -Pusername=juana@gmail.com -Ppassword=123456 -Ptoken=as:addCredential
+command:
+
+	$ gradle addCredential -Pid=myidLZ -Pusername=juana@gmail.com
+						   -Ppassword=123456 -Ptoken=as:addCredential
+
+output:
 
 ```bash
 :addCredential
@@ -109,7 +123,11 @@ BUILD SUCCESSFUL
 ```
 ### Update credential by console
 
-***Output of:*** gradle updateCredential
+command:
+
+	$ gradle updateCredential
+
+output:
 
 ```bash
 :updateCredential
@@ -125,8 +143,12 @@ BUILD SUCCESSFUL
 
 ### Update credential by parameters
 
-***Output of:*** gradle updateCredential -Pid=myId -Pusername=user@organization.com
-																  -Ppassword=myPassword -Ptoken=myToken
+command:
+
+	$ gradle updateCredential -Pid=myId -Pusername=user@organization.com
+		    				  -Ppassword=myPassword -Ptoken=myToken
+
+output:
 
 ```bash
 :updateCredential

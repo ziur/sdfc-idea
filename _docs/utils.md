@@ -3,11 +3,25 @@ layout: docs
 title: Utils
 permalink: /docs/utils/
 ---
-## Execute group has the next task:
-## 8.1.1 Task execute
-#### This task executes a code block of Apex using input parameter to set file path of source code
-<h5> Output of:  <strong>gradle execute -Pinput="src/classes/Class1.cls"</strong></h5>
- ```bash
+## 8.1 Execute group has the next task:
+
+#### **Objective**
+
+This task is able to execute code apex.
+
+#### **Parameters**
+
+This task has two parameters called ***input*** and ***output*** where the first is used to set a file that you want to execute, another one is used to set a file path and get results in this file.
+
+## 8.1.1 Execute task
+
+This task executes a code block of Apex using input parameter to set file path of source code
+
+	$ gradle execute -Pinput="src/classes/Class1.cls"
+
+output:
+
+```bash
 :execute
 ___________________________________________
         Username: juan.perez@mail.com
@@ -68,10 +82,15 @@ BUILD SUCCESSFUL
 ```
 
 ### 8.1.2 Task execute with inline code and output parameter
-#### This task executes a code block of Apex using input parameter to set inline code and 
-#### output parameter to set a file path and get results in this file
-<h5> Output of:  <strong>gradle execute -Pinput="system.debug('hello world');" -Poutput=build/hello.txt</strong></h5>
- ```bash 
+
+This task executes a code block of Apex using input parameter to set inline code and output parameter to set a file path and get results in this file.
+
+	$ gradle execute -Pinput="system.debug('hello world');"
+				     -Poutput=build/hello.txt
+
+output:
+
+```bash
 :execute
 ___________________________________________
         Username: juan.perez@mail.com

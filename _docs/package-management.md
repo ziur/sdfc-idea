@@ -3,8 +3,11 @@ layout: docs
 title: Package management
 permalink: /docs/packages/
 ---
-## Package Management group has these tasks:
-## 5.1 Install package task
+## 5.1 Management package
+
+Those tasks are able to install and unisntall packages.
+
+## 5.2 Install package task
 
 This task installs a manage package based on the following parameters:
 
@@ -14,15 +17,19 @@ This task installs a manage package based on the following parameters:
 
 This task uses the same credentials used in other tasks, so bellow we have an example about [Apex Lang](https://code.google.com/p/apex-lang/) package installation.
 
-<h5> Output of:  <strong>gradle installPackage -Ppkg.namespace=al -Ppkg.version=1.18</strong></h5>
+command:
 
-```bash    
+	$ gradle installPackage -Ppkg.namespace=al -Ppkg.version=1.18
+
+output:
+
+```bash
     :installPackage
     ___________________________________________
             Username: john.smith@gmail.com
             Login type: login
-    ___________________________________________  
-                                   
+    ___________________________________________
+
           [zip] Building zip: \users\john.smith\my_sfdc_project\build\deploy.zip
     Starting deploy...
     [==================================================]   100%
@@ -30,42 +37,48 @@ This task uses the same credentials used in other tasks, so bellow we have an ex
     Install package 'al' v1.18 success.
 
     BUILD SUCCESSFUL
-    
+
     Total time: 4 mins 28.956 secs
 ```
 
-Once that task is completed a result message will be displayed
+Once that task is completed a result message will be displayed.
 
-## 5.2  Uninstall package task
+## 5.3  Uninstall package task
 
 This task uninstalls a manage package based on the following parameters:
 
 * -Ppkg.namespace = Package namespace is required parameter.
 
 Bellow we have an example about [Apex Lang](https://code.google.com/p/apex-lang/) package installation.
-<h5> Output of:  <strong>gradle uninstallPackage -Ppkg.namespace=al</strong></h5>
-```bash    
+
+command:
+
+	$ gradle uninstallPackage -Ppkg.namespace=al
+
+output:
+
+```bash
     :uninstallPackage
-    ___________________________________________  
+    ___________________________________________
             Username: john.smith@gmail.com
             Login type: login
 
-    ___________________________________________  
-                                     
+    ___________________________________________
+
     Verifying installed package 'al' ...
-    Starting retrieve...             
-    Waiting for retrieve result...   
-    Retrieve result completed        
+    Starting retrieve...
+    Waiting for retrieve result...
+    Retrieve result completed
         [unzip] Expanding: \users\john.smith\my_sfdc_project\build\installedpkgsresult\installedPkgs.zip into \users\john.smith\my_sfdc_project\build\installedpkgsresult
-    Installed package 'al' found.    
+    Installed package 'al' found.
           [zip] Building zip: \users\john.smith\my_sfdc_project\build\deploy.zip
-    Starting deploy...               
+    Starting deploy...
     [==================================================]   100%
     The files were successfully deployed
-    Uninstall package 'al' success.  
-                                     
+    Uninstall package 'al' success.
+
     BUILD SUCCESSFUL
-                   
+
     Total time: 2 mins 24.547 secs
 
 ```
@@ -73,23 +86,26 @@ Once that task is completed a result message will be displayed.
 
 If there target org does not have the related package installed the command will do nothing, becuase it verified an installed package before to start the process, bellow we have an execution example.
 
-<h5> Output of:  <strong>gradle uninstallPackage -Ppkg.namespace=al</strong></h5>
-```bash    
+	$ gradle uninstallPackage -Ppkg.namespace=al
+
+output:
+
+```bash
     :uninstallPackage
-    ___________________________________________  
+    ___________________________________________
             Username: john.smith@gmail.com
             Login type: login
-    ___________________________________________  
-                                     
+    ___________________________________________
+
     Verifying installed package 'al' ...
-    Starting retrieve...             
-    Waiting for retrieve result...   
-    Retrieve result completed        
+    Starting retrieve...
+    Waiting for retrieve result...
+    Retrieve result completed
     WARNING: Entity of type 'InstalledPackage' named 'al' cannot be found
     Installed package 'al' not found.
-                                     
+
     BUILD SUCCESSFUL
-                   
+
     Total time: 15.179 secs
 
 ```
