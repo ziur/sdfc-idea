@@ -3,6 +3,16 @@
   - home
   - quickstart
   - installation
+  - development
   - usage
   - structure
   - configuration
+  - authentication
+  - credentials
+  - file-monitor
+  - package-management
+  - retrieve
+  - undeploy
+  - deployment
+  - update
+  - utils
