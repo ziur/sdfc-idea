@@ -3,53 +3,64 @@ layout: docs
 title: Monitoring local changes
 permalink: /docs/watch/
 ---
-## File monitor group has the next task:
-#### Task status let's user see what files has been changed
+## 4.1.1 File monitor tasks
+***Task status*** let's user see what files has been changed as (new file, deleted file and updated file).
 
-## 4.1.1 Changed file
-#### Task status shows files which have been added, modified or deleted. In the point above the file Force_com.app was modified but not updated to the Organization so the status of that file still on Changed file.
+	gradle status
+
+***Task reset*** let's user restarted the file monitor.
+
+	gradle reset
+
+## 4.1.2 Status task
+### Changed file
+Task status shows files which have been added, modified or deleted. In the point above the file Force_com.app was modified but not updated to the Organization so the status of that file still on Changed file.
 
 <h5> Output of:  <strong>gradle status</strong></h5>
 
-```bash                                                                              
+```bash
     *********************************************
-                  Status Files Changed              
+                  Status Files Changed
     *********************************************
     Force_com.app - Changed file
     *********************************************
-                           
+
     BUILD SUCCESSFUL
 ```
 
-## 4.1.2 Added, changed and deleted files
-#### We have the same results if we deleted a file or we created a file, just the status of each file is different
+### Added, changed and deleted files
+We have the same results if we deleted a file or we created a file, just the status of each file is different.
+
+<h5> Output of:  <strong>gradle status</strong></h5>
+
 ```bash
     > gradle status
-    :status                                                                          
+    :status
     *********************************************
-                  Status Files Changed             
+                  Status Files Changed
     *********************************************
     My-Layout.layout - New file
     TestClass.cls - Deleted file
     TestClass.cls-meta.xml - Deleted file
     *********************************************
-                           
+
     BUILD SUCCESSFUL
 ```
 
-## 4.1.3 No change on the files
-#### If there isn't file modified the result should be like this
+### No change on the files
+If there isn't file modified the result should be like this:
+
+<h5> Output of:  <strong>gradle status</strong></h5>
+
 ```bash
     > gradle status
-    :status                                                                          
-                   
+    :status
+
     BUILD SUCCESSFUL
 ```
 
-#### Task reset let's user restarted the file monitor
-
-## 4.2.1 Executing task reset
-#### File monitor tracker will be restarted
+## 4.1.5 Reset task
+File monitor tracker will be reset.
 <h5> Output of:  <strong>gradle reset</strong></h5>
 ```bash
    :reset

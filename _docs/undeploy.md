@@ -4,6 +4,7 @@ title: Undeploy
 permalink: /docs/undeploy/
 ---
 ## 3.4.1 Undeploy task
+
 #### **Objective**
 
 This task is able to undeploy code from SalesForce organization. To avoid dependency problems It truncates code and it deploys code truncated as first step, after that It deploys code from local repository to SalesForce organization.
@@ -95,10 +96,10 @@ update {
 ```
 
 #### **Adding custom interceptor**
-To add a new ***interceptor*** you can use interceptor or firstInterceptor methods for each task
-where you want to add a new custom interceptor.
+To add a new ***interceptor*** you can use interceptor or firstInterceptor methods for each task where you want to add a new custom interceptor.
 
-##### Adding a new anonymous interceptor
+Adding a new anonymous interceptor
+
 ```bash
 undeploy {
     interceptor('classes', { file ->
@@ -108,7 +109,8 @@ undeploy {
 
 ```
 
-##### Adding a new custom interceptor that will execute after than all interceptors on the classes
+Adding a new custom interceptor that will execute after than all interceptors on the classes
+
 ```bash
 undeploy {
     interceptor('classes','doLast', { file ->
@@ -118,7 +120,8 @@ undeploy {
 
 ```
 
-##### Adding a new custom interceptor that will execute before than all interceptors on the objects
+Adding a new custom interceptor that will execute before than all interceptors on the objects
+
 ```bash
 undeploy {
     firstInterceptor('objects', 'printFilePath', { file ->
@@ -145,8 +148,9 @@ This parameter can exclude files by:
     * -Pexcludes=\*\*/\*Account\*/**
     * -Pexcludes=\*\*/*.cls
 
-### **Examples:**
-####  **Using excludes parameter:**
+## **Examples:**
+
+### **Using excludes parameter:**
 To exclude all classes.
 
 	gradle undeploy -Pexcludes=classes
@@ -174,7 +178,7 @@ To exclude all files with  **.cls** extension.
 	gradle undeploy -Pexcludes=**/*.cls
 
 
-####  **Using interceptors by default:**
+###  **Using interceptors by default:**
 
 ```bash
     > gradle undeploy

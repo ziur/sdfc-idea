@@ -1,9 +1,10 @@
 ---
 layout: docs
-title: Undeploy
+title: Update
 permalink: /docs/update/
 ---
 ## 3.3.1 Update task
+
 #### **Objective**
 This task just deploys changed code (deleted code, added code and updated code), when you have changed class and a deleted trigger It deletes that trigger and updating the class changed according file tracker.
 
@@ -14,7 +15,7 @@ Those parameters can be used as task property or into your build script.
 
 ## 3.3.2 Executing update task
 
-#### **Without parameters:**
+#### **Without parameters**
 
 User can update all files that are listed on file tracker like file changed, deleted or new one. If you want to run this task, you should write the next command:
 
@@ -22,7 +23,7 @@ User can update all files that are listed on file tracker like file changed, del
 
 > **Note:** To know more about file tracker see Chapter 4 File Monitor
 
-#### **Using folders parameter:**
+#### **Using folders parameter**
 
 User can update files that are within the folder user wants and listed on file tracker like file changed, deleted or new one.
 
@@ -39,19 +40,19 @@ This parameter can exclude files by:
 
  ***folder*** if you want to exclude a folder or folders, You should write the next parameter:
 
-			gradle update -Pexcludes=classes
-		    gradle update -Pexcludes=classes,objects.
+        gradle update -Pexcludes=classes
+        gradle update -Pexcludes=classes,objects.
 
  ***file*** if you want to exclude a file or files, You should write the next parameter:
 
-			gradle update -Pexcludes=classes/Class1.cls
+        gradle update -Pexcludes=classes/Class1.cls
 
  ***wildcard*** if you want to exclude using wildcard, You should write the next parameter:
 
-			gradle update  -Pexcludes=classes/**
-		    gradle update  -Pexcludes=objects/*.object
-		    gradle update  -Pexcludes=**/*Account*/**
-		    gradle update  -Pexcludes=**/*.cls
+        gradle update  -Pexcludes=classes/**
+        gradle update  -Pexcludes=objects/*.object
+        gradle update  -Pexcludes=**/*Account*/**
+        gradle update  -Pexcludes=**/*.cls
 
 ##	3.3.3 Examples:
 
@@ -59,7 +60,7 @@ This parameter can exclude files by:
 
 In this case four files was changed how to see the next output.
 
-<h5> Output of:  <strong>gradle update</strong></h5>
+***Output of:***  gradle update
 
 ```bash
     :update
@@ -88,7 +89,7 @@ In this case four files was changed how to see the next output.
 
 In this example Class1.cls and trigger1.trigger was updated.
 
-<h5> Output of:  <strong>gradle update -Pfolders=classes,triggers</strong></h5>
+***Output of:***  gradle update -Pfolders=classes,triggers
 
 ```bash
     :update
@@ -113,7 +114,7 @@ In this example Class1.cls and trigger1.trigger was updated.
 
 ### Using excludes parameter:
 In this case Class1.cls and Class2.cls were updated and Class1.cls was excluded.
-<h5> Output of:  <strong>gradle update -Pexcludes=**/Class1.cls</strong></h5>
+***Output of:***  gradle update -Pexcludes=**/Class1.cls
 
 ```bash
     > gradle update
@@ -141,7 +142,7 @@ In this case Class1.cls and Class2.cls were updated and Class1.cls was excluded.
 
 ```
 In this example files were updated from classes and objects folders and classes folder was excluded.
-<h5> Output of:  <strong> gradle update -Pexcludes=classes</strong></h5>
+***Output of:***  gradle update -Pexcludes=classes
 
 ```bash
     > gradle update

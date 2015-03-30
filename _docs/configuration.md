@@ -7,7 +7,8 @@ EnForce Dev Tool Plugin
 =============
 
 This is an open source plugin
-## Plugin Requirements
+
+##  Plugin Requirements
  * Java JDK 1.7
  * Gradle 2.0 or greater
  * Operation System
@@ -20,16 +21,15 @@ This is an open source plugin
  * User account in a Salesforce Organization and the related security token
 
 
-## Tentative files configuration for User
+##  Tentative files configuration for User
 
-### Files Gradle
+###  Files Gradle
 
 * build.gradle has the configuration of gradle for user.
 * gradle.properties has values that build.gradle will use.
-* credentials.dat has all credentials to use
-See below the tentative file
+* credentials.dat has all credentials to use.
 
-##### build.gradle
+#####  build.gradle
 ```groovy
    buildscript {
        repositories {
@@ -40,13 +40,13 @@ See below the tentative file
            }
        }
        dependencies {
-           classpath 'com.jalasoft.sfdc.devtool:SFDC-Dev-Tool:1.0.62.b13'
+           classpath 'org.jalasoft.gradle.plugins.enforce:enforce-gradle-plugin:1.0.7'
        }
    }
 
-   apply plugin: 'force'
+   apply plugin: 'enforce'
 
-   force {
+   enforce {
        srcPath = 'src'
        standardObjects = ["Account.object"]
        poll = 200 //times
@@ -58,9 +58,11 @@ See below the tentative file
 ```
 
 ##### gradle.properties
+
 ```groovy
     credentialId=myCustomId
 ```
+
 ##### credentials.dat
 
 ```json
@@ -74,20 +76,24 @@ See below the tentative file
     }
 }
 ```
-## Setup Salesforce organization credentials
 
+
+### Setup Salesforce organization credentials
 
 <div class="note info">
   <h5>Credential support</h5>
-  <p>Managing credentials can create and update credentials in *credentials.dat* file it is located in HOME directory, a format was showed in Files gradle that is on last point.</p>
-   <p>* Creates a credential in *credentials.dat* file located in HOME directory it is saved as encrypted by default and its *sfdcType* field is saved with login value.</p>
-   <p>* Updates a credential by key from *credentials.dat* file.</p>
+  <p>Managing credentials can create and update credentials in 'credentials.dat' file it is located in HOME directory, a format was showed in Files gradle that is on last point.</p>
+   <p> Creates a credential in 'credentials.dat' file located in HOME directory it is saved as encrypted by default and its 'sfdcType' field is saved with login value.</p>
+   <p> Updates a credential by key from 'credentials.dat' file.</p>
 </div>
+
 
 > **Note:** Notice that the example uses the "default" key which by convention is the one to be used by default when a task is executed. You can have several entries to different salesforce accounts but each entry needs to have an unique key.
 
 ## Project gradle tasks
+
 The gradle project contains tasks that will help on development and packaging.
+
 > **Note:** You have to execute the gradle tasks from the project directory it will shows you All tasks runnable from root project.
 
 ### Build Setup tasks
