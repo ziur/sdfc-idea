@@ -101,6 +101,7 @@ The gradle project contains tasks that will help on development and packaging. Y
 command:
 
 	$ gradle tasks
+	
 output:
 
 ### Build Setup tasks
