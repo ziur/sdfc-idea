@@ -24,7 +24,8 @@ But if you use another domain for example
 What I did is I change sfdcType domain of credential.dat 
  
 default credential
- 
+
+```json
 {
 "default": {
         "username": "user@org.com",
@@ -34,10 +35,11 @@ default credential
         "type": "ecrypted"
     }
 }
- 
+```
  
 modified credential
- 
+
+```json 
 {
 "default": {
         "username": "user@org.com",
@@ -47,4 +49,4 @@ modified credential
         "type": "ecrypted"
     }
 }
- 
+```
