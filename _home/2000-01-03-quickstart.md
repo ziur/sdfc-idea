@@ -20,7 +20,12 @@ buildscript {
        classpath 'org.jalasoft.gradle.plugins.enforce:enforce-gradle-plugin:1.0.0'
    }
 }
+
 apply plugin: 'enforce'
+
+enforce {
+    srcPath = 'src'
+}
 {% endhighlight %}
 
 - Register a Salesforce credential to be used
