@@ -12,6 +12,7 @@ Scenario
 The problem that I found during the development, is that most of the developers have all their data, scenarios and configuration present in the organization, therefore they did not like the idea of undeploy the current code and then deploy the latest changes, however they always need the latest changes.
 
 What I did is I implemented a custom task to update the current code that it's in the organization without performing an undeploy operation in order to keep all the data, configuration and so on. Here you have an example:
+
 ```
 task truncate(type:Upload) {
     group = 'Project Tasks'
