@@ -10,7 +10,7 @@ Jenkins will generate:
 <ol>
 	<ul>
 		<li>Coverage percentage. </li>
-		<li>A pie chart about unit test percentage in ranges defined as: </li>
+		<li>A pie chart about amount of test classes whose code coverage percentage is  in ranges defined as: </li>
 			<ul>
 		      <li>Danger (0% - 74%)</li>	   
 		      <li>Risk (75% - 79%)</li>	   
