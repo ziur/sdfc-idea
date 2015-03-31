@@ -24,12 +24,15 @@ Here you can find the enought required information to have running a Gradle proj
 
 2. Register a Salesforce credential to be used
 {% highlight bash %}
-   $> gradle addCredential -Pid=<identifier> -Puser=<USER NAME> -Ppassword=<PASSWORD> -Ptoken=<SECURITY TOKEN>
+   $ gradle addCredential -Pid=<identifier> 
+                          -Puser=<USER NAME> 
+                          -Ppassword=<PASSWORD> 
+                          -Ptoken=<SECURITY TOKEN>
 {% endhighlight %}
 
 3. Start executing available commands, for example, retrieve all the classes from the Salesforce Organization
 {% highlight bash %}
-   $> gradle retrieve -Pfiles=classes
+   $ gradle retrieve -Pfiles=classes
 {% endhighlight %}
 
 Now you can start using all the Enforce features.
