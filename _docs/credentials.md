@@ -55,8 +55,10 @@ When you add credential by parameters it is encrypted by default. To add a new c
 
 The command to add is:
 
-	$ gradle addCredential -Pid=myidLZ -Pusername=juana@gmail.com
-	                       -Ppassword=123456 -Ptoken=as:addCredential
+	$ gradle addCredential -Pid=myidLZ 
+			       -Pusername=juana@gmail.com
+	                       -Ppassword=123456 
+	                       -Ptoken=as:addCredential
 
 
 
@@ -80,8 +82,10 @@ If you want to update credential by parameters you should use the next parameter
 
 This is a command:
 
-	$ gradle updateCredential -Pid=myId -Pusername=user@organization.com
-	                          -Ppassword=myPassword -Ptoken=myToken
+	$ gradle updateCredential -Pid=myId 
+			          -Pusername=user@organization.com
+	                          -Ppassword=myPassword 
+	                          -Ptoken=myToken
 
 
 ## Examples
@@ -111,8 +115,10 @@ BUILD SUCCESSFUL
 
 command:
 
-	$ gradle addCredential -Pid=myidLZ -Pusername=juana@gmail.com
-						   -Ppassword=123456 -Ptoken=as:addCredential
+	$ gradle addCredential -Pid=myidLZ 
+			       -Pusername=juana@gmail.com
+			       -Ppassword=123456 
+			       -Ptoken=as:addCredential
 
 output:
 
@@ -147,8 +153,10 @@ BUILD SUCCESSFUL
 
 command:
 
-	$ gradle updateCredential -Pid=myId -Pusername=user@organization.com
-		    				  -Ppassword=myPassword -Ptoken=myToken
+	$ gradle updateCredential -Pid=myId 
+			          -Pusername=user@organization.com
+		    		  -Ppassword=myPassword 
+		    		  -Ptoken=myToken
 
 output:
 
