@@ -7,7 +7,7 @@ published: True
 
 ---
 
-##Scenario
+## Scenario
  
 When the user create an account using wizard of plugin only has two options about  organization domain:
 -	login
