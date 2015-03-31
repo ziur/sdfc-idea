@@ -4,6 +4,7 @@ title: Monitoring local changes
 permalink: /docs/file-monitor/
 ---
 ## File monitor tasks
+
 ***Task status*** let's user see what files has been changed as (new file, deleted file and updated file).
 
 	$ gradle status
@@ -13,7 +14,9 @@ permalink: /docs/file-monitor/
 	$ gradle reset
 
 ## Status task
+
 ### Changed file
+
 Task status shows files which have been added, modified or deleted. In the point above the file Force_com.app was modified but not updated to the Organization so the status of that file still on Changed file.
 
 command:
