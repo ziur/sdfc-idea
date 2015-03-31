@@ -7,17 +7,18 @@ permalink: /jenkins/home/
 This plugin allows you to capture code coverage information from [EnForce gradle plugin](https://github.com/Jalasoft/enforce-gradle-plugin). 
 
 Jenkins will generate:
-* Coverage percentage. 
-* A pie chart about unit test percentage in ranges defined as: 
-
-    *Danger (0% - 74%)
-    
-    *Risk (75% - 79%)
-    
-    *Acceptable (80% - 94%)
-    
-    *Safe(95% - 100%)
-
+<ol>
+	<ul>
+		<li>Coverage percentage. </li>
+		<li>A pie chart about unit test percentage in ranges defined as: </li>
+			<ul>
+		      <li>Danger (0% - 74%)</li>	   
+		      <li>Risk (75% - 79%)</li>	   
+		      <li>Acceptable (80% - 94%)</li>	   
+		      <li>Safe(95% - 100%)</li>	   
+			</ul>
+   </ul>
+</ol>		
 
 The EnForce jenkins plugin can be [downloaded here]().
 
