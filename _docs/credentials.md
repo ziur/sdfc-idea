@@ -121,6 +121,7 @@ output:
 
 BUILD SUCCESSFUL
 ```
+
 ### Update credential by console
 
 command:
