@@ -36,6 +36,7 @@ output:
 ```
 
 ### Added, changed and deleted files
+
 We have the same results if we deleted a file or we created a file, just the status of each file is different.
 
 command:
@@ -59,6 +60,7 @@ output:
 ```
 
 ### No change on the files
+
 If there isn't file modified the result should be like this:
 
 command:
@@ -75,6 +77,7 @@ output:
 ```
 
 ## Reset task
+
 File monitor tracker will be reset.
 
 command:
