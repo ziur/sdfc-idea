@@ -21,7 +21,7 @@ Task status shows files which have been added, modified or deleted. In the point
 
 command:
 
-	$ gradle status</strong></h5>
+	$ gradle status
 
 output:
 
