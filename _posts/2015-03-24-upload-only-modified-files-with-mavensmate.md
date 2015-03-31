@@ -7,26 +7,50 @@ published: True
 comments: True
 ---
 
-You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run `jekyll serve --watch`, which launches a web server and auto-regenerates your site when a file is updated.
 
-To add new posts, simply add a file in the `_posts` directory that follows the convention `YYYY-MM-DD-name-of-post.ext` and includes the necessary front matter. Take a look at the source for this post to get an idea about how it works.
+Mavesmate is a tool that helps you in your Salesforce development, but the bad news is that you need to deploy your changes one by one(and also with the Salesforce IDE). You can easily improve this scenario using the  `update` command to deploy your modified files in just a deploy. 
 
-Jekyll also offers powerful support for code snippets:
+### Step 1
+You need to setting up your EnForce environment into your Mavesmate project.
 
-{% highlight ruby %}
-def print_hi(name)
-  puts "Hi, #{name}"
-end
-print_hi('Tom')
-#=> prints 'Hi, Tom' to STDOUT.
-{% endhighlight %}
+### Step 2
+Then disable the Mavesmate `mm_compile_on_save` option. Just open your Mavesmate project and then go to  `MavesMate>Settings>User`.
 
-Check out the [Jekyll docs][jekyll] for more info on how to get the most out of Jekyll. File all bugs/feature requests at [Jekyll’s GitHub repo][jekyll-gh]. If you have questions, you can ask them on [Jekyll’s dedicated Help repository][jekyll-help].
+```
+"mm_compile_on_save" : false,
+```
 
--var disqus_url = '{{ site.url }}{{ page.url }}';
+### Step 3
+Create a build command for your Mavesmate project, it should look something like this.
 
-{% comment %}{% endcomment %}
+```
+{
+    "cmd": ["gradle", "update"],
+    "working_dir": "${project_path}",
+    "selector": "text.html,source.apex,text.xml",
+    "shell": true
+}
+```
 
-[jekyll]:      http://jekyllrb.com
-[jekyll-gh]:   https://github.com/jekyll/jekyll
-[jekyll-help]: https://github.com/jekyll/jekyll-help
+it needs to be stored in the Sublime user's packages, let say `sf-build-command.sublime-build` file.
+
+- Windows: %APPDATA%\Sublime Text 3\User\sf-build-command.sublime-build
+- OS X: ~/Library/Application Support/Sublime Text 3/User/sf-build-command.sublime-build
+- Linux: ~/.config/sublime-text-3/user/sf-build-command.sublime-build
+
+Then go to `Tools>Build System` and select `sf-build-command`  by default.
+
+### Step 4
+
+Open a console where you have your build.gradle script and then execute.
+
+```
+gradle status
+```
+
+It is just to start the EnForce file monitor that checks the file modifications.
+
+### Step 5
+Once you want to deploy your changes, just execute `Ctrl + b` to deploy them. 
+
+Now you are able to deploy your modified files just in a deploy instead one by one and that it is awesome.
