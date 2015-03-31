@@ -17,16 +17,18 @@ buildscript {
        mavenCentral()
    }
    dependencies {
-       classpath 'com.jalasoft.sfdc.devtool:SFDC-Dev-Tool:1.0.0'
+       classpath 'org.jalasoft.gradle.plugins.enforce:enforce-gradle-plugin:1.0.0'
    }
 }
-apply plugin: 'force'
+apply plugin: 'enforce'
 {% endhighlight %}
 
 - Register a Salesforce credential to be used
 {% highlight bash linenos=table%}
-   $ gradle addCredential -Pid=<identifier> -Puser=<USER NAME> 
-                          -Ppassword=<PASSWORD> -Ptoken=<SECURITY TOKEN>
+   $ gradle addCredential  -Pid=<identifier> 
+                           -Puser=<USER NAME> 
+                           -Ppassword=<PASSWORD> 
+                           -Ptoken=<SECURITY TOKEN>
    #=> Creates an entry on the credentials store
 {% endhighlight %}
 
