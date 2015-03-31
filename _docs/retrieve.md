@@ -3,7 +3,7 @@ layout: gradle
 title: Retrieve code
 permalink: /docs/retrieve/
 ---
-## Retrieve group has the next task:
+
 ## Retrieve task
 
 #### **Objective**
@@ -60,6 +60,7 @@ The only thing that we have to do is:
 ```
 
 ### Using files parameter
+
 This task retrieve the files that we want retrieve, that means that we can recover a file o many specific files from the organization. This parameter support files and folders.
 
       $ gradle retrieve -Pfiles=classes/Class1.cls
@@ -83,7 +84,7 @@ When you use a destination parameter you are able to use relative or absolute pa
 >Once that task is executed successfully all the files are copied inside the source folder replacing the existing files.
 >If we want recover only the files retrieved we can find them on build folder as a zip file with the name zipRecovered.zip
 
-##. Examples
+## Examples
 
 
 ### Without parameters
@@ -115,7 +116,9 @@ output:
 command:
 
 	$ gradle retrieve -Pfiles=classes/Class1.cls,triggers/trigger1.trigger
+	
 output:
+
 
 ```bash
     :retrieve
