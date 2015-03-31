@@ -1,9 +1,9 @@
 ---
-layout: docs
+layout: gradle
 title: Deployment tasks
 permalink: /docs/deployment/
 ---
-## 3.1.1 Deploy task
+## Deploy task
 
 #### **Objective**
 This task deploys all code from your local directory to SalesForce organization, for this as a first step It truncates your code from local repository and deploys those files truncated as second step It deploys your code to SatesForce organization.
@@ -29,7 +29,7 @@ This task has two parameters called **excludes** and **folders**. You can choose
 
 Those parameters can be used as console commands or into your build script.
 
-## 3.1.2 Executing deploy task
+## Executing deploy task
 
 ### Without parameters
 Once this task is executed without parameters it deploys all code to SalesForce organization.
@@ -63,7 +63,7 @@ User can deploy code excluding some files using **excludes** parameter.
     $ gradle deploy  -Pexcludes=**/*Account*/**
     $ gradle deploy  -Pexcludes=**/*.cls
 
-## 3.1.3 Examples:
+## Examples:
 
 ### Without parameters
 
@@ -187,7 +187,7 @@ output:
     BUILD SUCCESSFUL
 ```
 
-## 3.2.1 Upload task
+## Upload task
 
 #### **Objective**
 This task uploads your code from your local repository to SalesForce organization  directly as it is.
@@ -196,7 +196,7 @@ This task uploads your code from your local repository to SalesForce organizatio
 This task has two parameters called **files** and **excludes**. If you want to upload a file or more files you should use files parameters it uploads code by file by folder and using wildcards.
 If you want to exclude some files you should use excludes parameter.
 
-## 3.2.2 Executing upload task
+## Executing upload task
 
 ### Without parameters
 User can upload all source code to organization, to do this you should execute to ***upload task*** without parameters.
@@ -244,7 +244,7 @@ User can deploy code excluding some files using **excludes** parameter.
         $ gradle upload  -Pexcludes=**/*Account*/**
         $ gradle upload  -Pexcludes=**/*.cls
 
-##  3.2.3 Examples:
+## Examples:
 
 ### Without parameters
 When you run this command all files are uploaded to organization.
@@ -421,6 +421,6 @@ output:
     BUILD SUCCESSFUL
 ```
 
-## 3.2.4 Limitations of Upload task
+## Limitations of Upload task
 
 *	***files*** parameter doesn't support absolute paths.

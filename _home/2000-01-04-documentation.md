@@ -6,11 +6,10 @@ color: white
 fa-icon: book
 ---
 
-## All the documentation is available **[here](docs/home)**
+## All the documentation is available **[here](documentation.html)**
 
 Below you have links to most important ones:
   * [Quick start](docs/quickstart/)
   * [Installation](docs/installation/)
-  * [Task list](docs/tasks/)
-  * [Articles](docs/articles/)
+  * [Articles](articles.html)
   * [Development](docs/development/)

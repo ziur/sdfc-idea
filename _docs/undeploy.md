@@ -1,9 +1,9 @@
 ---
-layout: docs
+layout: gradle
 title: Undeploy
 permalink: /docs/undeploy/
 ---
-## 3.4.1 Undeploy task
+## Undeploy task
 
 #### **Objective**
 
@@ -68,7 +68,7 @@ All code will be undeployed from SalesForce organization, truncating dependencie
 >  - You are able to create your custom interceptors using ***globalInterceptor*** or ***interceptor***.
 > - To create your custom interceptors you can see examples in 3.4.2
 
-## 3.4.2 Undeploy task using interceptors
+## Undeploy task using interceptors
 When the undeploy task is executed all interceptors by default will be executed.
 
 
@@ -133,7 +133,7 @@ undeploy {
 
 >**Note:** Those interceptors have to be into build.gradle file.
 
-## 3.4.3 Undeploy task using excludes parameter
+## Undeploy task using excludes parameter
 This parameter can exclude files by:
 
 * ***folder*** if you want to exclude a folder or folders, You should write the next parameter:

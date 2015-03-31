@@ -1,5 +1,5 @@
 ---
-layout: docs
+layout: gradle
 title: Development
 permalink: /docs/development/
 ---
@@ -23,6 +23,6 @@ Once you have the source code, open the source code in a console and execute:
 
 Please, make sure that your changes are not breaking any functionality running the unit test:
 {% highlight bash %}
-   $ gradle build
+   $ gradle test
 {% endhighlight %}
 

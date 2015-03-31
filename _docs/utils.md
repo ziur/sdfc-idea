@@ -1,9 +1,9 @@
 ---
-layout: docs
+layout: gradle
 title: Utils
 permalink: /docs/utils/
 ---
-## 8.1 Execute group has the next task:
+## Execute group has the next task:
 
 #### **Objective**
 
@@ -13,7 +13,7 @@ This task is able to execute code apex.
 
 This task has two parameters called ***input*** and ***output*** where the first is used to set a file that you want to execute, another one is used to set a file path and get results in this file.
 
-## 8.1.1 Execute task
+## Execute task
 
 This task executes a code block of Apex using input parameter to set file path of source code
 
@@ -81,7 +81,7 @@ Execute Anonymous: }
 BUILD SUCCESSFUL
 ```
 
-### 8.1.2 Task execute with inline code and output parameter
+### Task execute with inline code and output parameter
 
 This task executes a code block of Apex using input parameter to set inline code and output parameter to set a file path and get results in this file.
 

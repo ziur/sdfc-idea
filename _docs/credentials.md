@@ -1,9 +1,9 @@
 ---
-layout: docs
+layout: gradle
 title: Credentials management
 permalink: /docs/credentials/
 ---
-## 1.1.1 Management credential profile
+## Management credential profile
 
 To deploy code into an organization you need a credential, for so you should create an account in SalesForce.
 
@@ -34,7 +34,7 @@ To management your credentials there are two files called credentials.dat locate
 
 In this file is saved all credentials with respective fields. It should be located into project directory or user home directory as priority use file that is in project directory.
 
-## 1.1.2 AddCredential task
+## AddCredential task
 
 This task adds a new credential into credentials.dat located in user home directory. There are two ways to add credentials one is by console another one is by parameters.
 
@@ -60,7 +60,7 @@ The command to add is:
 
 
 
-## 1.1.2 UpdateCredential  task
+## UpdateCredential  task
 This task update a credential from credentials.dat file located in user home directory.
 
 ### By console
@@ -84,7 +84,7 @@ This is a command:
 	                          -Ppassword=myPassword -Ptoken=myToken
 
 
-## 1.1.3 Examples
+## Examples
 
 ### Add credential by console
 

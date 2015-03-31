@@ -12,21 +12,21 @@
     <nav class="sidebar-nav">
       <a class="sidebar-nav-item{% if page.url == site.url %} active{% endif %}" href="{{ site.url }}">Home</a>
 
-      {% comment %}
-        The code below dynamically generates a sidebar nav of pages with
-        `layout: page` in the front-matter. See readme for usage.
-      {% endcomment %}
+{% comment %}
 
       {% assign pages_list = site.pages %}
       {% for node in pages_list %}
         {% if node.title != null %}
           {% if node.layout == "page" %}
-            <a class="sidebar-nav-item{% if page.url == node.url %} active{% endif %}" href="{{ node.url }}">{{ node.title }}</a>
+            <a class="sidebar-nav-item{% if page.url == node.url %} active{% endif %}" href="{{ node.url | prepend: site.url }}">{{ node.title }}</a>
           {% endif %}
         {% endif %}
       {% endfor %}
-
-      <a class="sidebar-nav-item" href="{{ site.github.repo }}/archive/v{{ site.version }}.zip">Download</a>
+{% endcomment %}
+      <a class="sidebar-nav-item{% if page.url == site.url %} active{% endif %}" href="{{ "/docs/home/" | prepend: site.url }}">Gradle plugin documentation</a>
+      <a class="sidebar-nav-item{% if page.url == site.url %} active{% endif %}" href="{{ "/jenkins/home/" | prepend: site.url }}">Jenkins plugin documentation</a>
+      <a class="sidebar-nav-item{% if page.url == site.url %} active{% endif %}" href="{{ "/tutorials.html" | prepend: site.url }}">Tutorials</a>
+      <a class="sidebar-nav-item{% if page.url == site.url %} active{% endif %}" href="{{ "/about.html" | prepend: site.url }}">About</a>
       <a class="sidebar-nav-item" href="{{ site.github.repo }}">GitHub project</a>
       <span class="sidebar-nav-item">Currently v{{ site.version }}</span>
     </nav>

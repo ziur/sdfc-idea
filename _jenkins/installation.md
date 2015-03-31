@@ -1,7 +1,7 @@
 ---
-layout: gradle
+layout: jenkins
 title: Installation
-permalink: /docs/installation/
+permalink: /jenkins/installation/
 ---
 
 

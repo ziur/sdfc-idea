@@ -1,6 +1,6 @@
 ---
-layout: docs
-title: Basi usage
+layout: gradle
+title: Basic usage
 permalink: /docs/usage/
 ---
 

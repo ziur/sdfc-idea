@@ -1,13 +1,13 @@
 ---
-layout: docs
+layout: gradle
 title: Package management
-permalink: /docs/packages/
+permalink: /docs/package-management/
 ---
-## 5.1 Management package
+## Management package
 
 Those tasks are able to install and unisntall packages.
 
-## 5.2 Install package task
+## Install package task
 
 This task installs a manage package based on the following parameters:
 
@@ -43,7 +43,7 @@ output:
 
 Once that task is completed a result message will be displayed.
 
-## 5.3  Uninstall package task
+##  Uninstall package task
 
 This task uninstalls a manage package based on the following parameters:
 

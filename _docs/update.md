@@ -1,9 +1,9 @@
 ---
-layout: docs
+layout: gradle
 title: Update
 permalink: /docs/update/
 ---
-## 3.3.1 Update task
+## Update task
 
 #### **Objective**
 This task just deploys changed code (deleted code, added code and updated code), when you have changed class and a deleted trigger It deletes that trigger and updating the class changed according file tracker.
@@ -13,7 +13,7 @@ This task has two parameters called **excludes** and **folders**. You can choose
 
 Those parameters can be used as task property or into your build script.
 
-## 3.3.2 Executing update task
+## Executing update task
 
 #### **Without parameters**
 
@@ -54,7 +54,7 @@ This parameter can exclude files by:
         $ gradle update  -Pexcludes=**/*Account*/**
         $ gradle update  -Pexcludes=**/*.cls
 
-##	3.3.3 Examples:
+## Examples:
 
 ### without parameters:
 

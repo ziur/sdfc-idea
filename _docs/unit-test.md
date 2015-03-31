@@ -1,9 +1,9 @@
 ---
-layout: docs
+layout: gradle
 title: Unit tests and Reporting
-permalink: /docs/unittest/
+permalink: /docs/unit-test/
 ---
-## 7.1.1 RunTest task
+## RunTest task
 
 #### **Objective**
 
@@ -15,7 +15,7 @@ This task execute all unit test classes in your organization but it is also poss
 #### **Parameters**
 This task has two parameters called ***async*** and ***cls*** where the first is used to run test asynchronously another one you can send a wildcard to run this task.
 
-## 7.1.2 Executing RunTest task
+## Executing RunTest task
 
 ### Synchronously
 
@@ -42,7 +42,7 @@ This task run only unit test classes according to wildcard and it generates XML 
 
 	$ gradle runTest -Pcls=Test* -Pasync=true
 
-## 7.1.3 Examples
+## Examples
 
 ###  Using a wildcard synchronously
 

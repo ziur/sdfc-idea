@@ -1,9 +1,9 @@
 ---
-layout: docs
+layout: gradle
 title: Authentication
 permalink: /docs/auth/
 ---
-## 2.1.1 Authentication to run tasks
+## Authentication to run tasks
 
 #### **Objective**
 To run deployment tasks you need login into your organization for so you have three options to authentication:
@@ -17,7 +17,7 @@ To run deployment tasks you need login into your organization for so you have th
 
 To use a credential you should use parameter called ***credentialId*** and send your credential id to run a deployment task.
 
-## 2.1.2 Forms of authentication
+## Forms of authentication
 
 ### Using credential by default
 You are able to run task with a credential by default when you don't write your credential. To do this You should have a credential with ***default*** id.

@@ -1,10 +1,10 @@
 ---
-layout: docs
+layout: gradle
 title: Retrieve code
 permalink: /docs/retrieve/
 ---
 ## Retrieve group has the next task:
-## 6.1 Retrieve task
+## Retrieve task
 
 #### **Objective**
 This task download files from your organization, based in your package xml, if there isn't this file, it downloads files by default:
@@ -24,7 +24,7 @@ If you don't have a package xml and you want to download only classes and trigge
 
 This task have two parameters called ***files*** and ***destination*** , where the first parameter is used to download an specifics files it supports files and folders, another one is used to indicate destination of files that will download.
 
-## 6.1.1 Executing Retrieve task
+## Executing Retrieve task
 
 ### Without parameters
 
@@ -83,7 +83,7 @@ When you use a destination parameter you are able to use relative or absolute pa
 >Once that task is executed successfully all the files are copied inside the source folder replacing the existing files.
 >If we want recover only the files retrieved we can find them on build folder as a zip file with the name zipRecovered.zip
 
-## 6.1. Examples
+##. Examples
 
 
 ### Without parameters

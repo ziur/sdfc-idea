@@ -1,9 +1,9 @@
 ---
-layout: docs
+layout: gradle
 title: Monitoring local changes
-permalink: /docs/watch/
+permalink: /docs/file-monitor/
 ---
-## 4.1.1 File monitor tasks
+## File monitor tasks
 ***Task status*** let's user see what files has been changed as (new file, deleted file and updated file).
 
 	$ gradle status
@@ -12,7 +12,7 @@ permalink: /docs/watch/
 
 	$ gradle reset
 
-## 4.1.2 Status task
+## Status task
 ### Changed file
 Task status shows files which have been added, modified or deleted. In the point above the file Force_com.app was modified but not updated to the Organization so the status of that file still on Changed file.
 
@@ -71,7 +71,7 @@ output:
     BUILD SUCCESSFUL
 ```
 
-## 4.1.5 Reset task
+## Reset task
 File monitor tracker will be reset.
 
 command:

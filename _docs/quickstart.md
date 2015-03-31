@@ -1,5 +1,5 @@
 ---
-layout: docs
+layout: gradle
 title: Quick start
 permalink: /docs/quickstart/
 ---
