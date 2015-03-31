@@ -65,8 +65,8 @@ All code will be undeployed from SalesForce organization, truncating dependencie
     </li>
 </ol>
 > **Note:**
->  - You are able to create your custom interceptors using ***globalInterceptor*** or ***interceptor***.
-> - To create your custom interceptors you can see examples in 3.4.2
+> You are able to create your custom interceptors using ***globalInterceptor*** or ***interceptor***.
+
 
 ## Undeploy task using interceptors
 When the undeploy task is executed all interceptors by default will be executed.
