@@ -138,7 +138,7 @@ output:
 ### Package Management tasks
 
    * installPackage - Installs a package to an organization.
-   * uninstallPackage - Uninstalls a package to an organization.
+   * uninstallPackage - Uninstalls a package from an organization.
 
 ### Retrieve tasks
 
