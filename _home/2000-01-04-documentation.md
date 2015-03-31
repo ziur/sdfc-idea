@@ -11,5 +11,5 @@ fa-icon: book
 Below you have links to most important ones:
   * [Quick start](docs/quickstart/)
   * [Installation](docs/installation/)
-  * [Articles](articles.html)
+  * [Tutorials](tutorials.html)
   * [Development](docs/development/)

@@ -13,7 +13,7 @@ The problem that I found during the development, is that most of the developers 
 
 What I did is I implemented a custom task to update the current code that it's in the organization without performing an undeploy operation in order to keep all the data, configuration and so on. Here you have an example:
 
-```
+{% highlight groovy %}
 task truncate(type:Upload) {
     group = 'Project Tasks'
     description = 'Truncates pages, classes, triggers and componenets'
@@ -29,7 +29,7 @@ task uploadDevOrg(type:Upload) {
 }
 
 uploadDevOrg.dependsOn truncate
-```
+{% endhighlight %}
 
 The reason to have the truncate task is because the organization may have old, updated or removed classes, methods or constructors, so in order to be able to upload the latest code in the organization, we need to truncate all the components.
 

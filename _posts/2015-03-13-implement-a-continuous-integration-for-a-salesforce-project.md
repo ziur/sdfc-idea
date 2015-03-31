@@ -7,26 +7,28 @@ published: True
 comments: True
 
 ---
-You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run `jekyll serve --watch`, which launches a web server and auto-regenerates your site when a file is updated.
+Implement a Continuous Integration process for a Salesforce project is quite difficult due to the cyclic dependencies between project components, for example, an `Object` can have a `weblink` to a `Custom Page`, which has a Class Controller that uses the previuous `Object`. These dependencies makes difficult to deploy project source code in a simple way, it is true that the `Migration Tool` can help you to upload code to an Organization, but it is not able to resolve those dependencies problems.
+`EnForce Gradle plugin` provides tasks that makes possible to implement a Continuous Integration process using `Gradle`.
+This article tries to show an example of a Gradle build script which implements a Continuos Integration process with the next steps:
 
-To add new posts, simply add a file in the `_posts` directory that follows the convention `YYYY-MM-DD-name-of-post.ext` and includes the necessary front matter. Take a look at the source for this post to get an idea about how it works.
++ clean environment
++ deploy code
++ runt unit test
 
-Jekyll also offers powerful support for code snippets:
+{% highlight groovy linenos=table%}
+buildscript {
+   repositories {
+       mavenLocal()
+       mavenCentral()
+   }
+   dependencies {
+       classpath 'org.jalasoft.gradle.plugins.enforce:enforce-gradle-plugin:1.0.0'
+   }
+}
 
-{% highlight ruby %}
-def print_hi(name)
-  puts "Hi, #{name}"
-end
-print_hi('Tom')
-#=> prints 'Hi, Tom' to STDOUT.
+apply plugin: 'enforce'
+
+enforce {
+    srcPath = 'src'
+}
 {% endhighlight %}
-
-Check out the [Jekyll docs][jekyll] for more info on how to get the most out of Jekyll. File all bugs/feature requests at [Jekyll’s GitHub repo][jekyll-gh]. If you have questions, you can ask them on [Jekyll’s dedicated Help repository][jekyll-help].
-
--var disqus_url = '{{ site.url }}{{ page.url }}';
-
-{% comment %}{% endcomment %}
-
-[jekyll]:      http://jekyllrb.com
-[jekyll-gh]:   https://github.com/jekyll/jekyll
-[jekyll-help]: https://github.com/jekyll/jekyll-help
