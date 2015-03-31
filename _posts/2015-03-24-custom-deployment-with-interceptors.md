@@ -1,5 +1,5 @@
 ---
-layout: post 
+layout: post
 title: Custom deployment with Interceptors
 categories: []
 tags: []
@@ -7,26 +7,29 @@ published: True
 
 ---
 
-You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run `jekyll serve --watch`, which launches a web server and auto-regenerates your site when a file is updated.
+Scenario
+--------
+The problem that I found during the development, is that most of the developers have all their data, scenarios and configuration present in the organization, therefore they did not like the idea of undeploy the current code and then deploy the latest changes, however they always need the latest changes.
 
-To add new posts, simply add a file in the `_posts` directory that follows the convention `YYYY-MM-DD-name-of-post.ext` and includes the necessary front matter. Take a look at the source for this post to get an idea about how it works.
+What I did is I implemented a custom task to update the current code that it's in the organization without performing an undeploy operation in order to keep all the data, configuration and so on. Here you have an example:
+```
+task truncate(type:Upload) {
+    group = 'Project Tasks'
+    description = 'Truncates pages, classes, triggers and componenets'
+    folders = "classes,pages,components,triggers"
+    commands = ['classInterceptor', 'deprecate', 'triggerInterceptor', 'componentInterceptor', 'pageInterceptor']
+}
 
-Jekyll also offers powerful support for code snippets:
+task uploadDevOrg(type:Upload) {
+    group = 'Project Tasks'
+    description = '...'
+    folders = "classes,pages,staticresources,components,triggers,objects,labels,tabs"
+    commands = ['deprecate']
+}
 
-{% highlight ruby %}
-def print_hi(name)
-  puts "Hi, #{name}"
-end
-print_hi('Tom')
-#=> prints 'Hi, Tom' to STDOUT.
-{% endhighlight %}
+uploadDevOrg.dependsOn truncate
+```
 
-Check out the [Jekyll docs][jekyll] for more info on how to get the most out of Jekyll. File all bugs/feature requests at [Jekyll’s GitHub repo][jekyll-gh]. If you have questions, you can ask them on [Jekyll’s dedicated Help repository][jekyll-help].
+The reason to have the truncate task is because the organization may have old, updated or removed classes, methods or constructors, so in order to be able to upload the latest code in the organization, we need to truncate all the components.
 
--var disqus_url = '{{ site.url }}{{ page.url }}';
-
-{% comment %}{% endcomment %}
-
-[jekyll]:      http://jekyllrb.com
-[jekyll-gh]:   https://github.com/jekyll/jekyll
-[jekyll-help]: https://github.com/jekyll/jekyll-help
+Once we have everything truncated we will be able to upload the code into your organization and all the development team should be able to work with the latest changes without losing their data.
