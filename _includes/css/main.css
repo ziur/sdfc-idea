@@ -355,3 +355,12 @@ nav ul li:hover, nav ul li.active {
     column-count:         2;
   }
 }
+
+/* other styles for demo */
+.fa-stack { font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif; }
+.stacked-icons {
+  margin-top: 20px;
+  text-align: center;
+}
+.fa-stack + .fa-stack { margin-left: .3em; }
+.fa-stack { margin-bottom: 20px; }
