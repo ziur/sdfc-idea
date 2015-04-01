@@ -41,6 +41,7 @@ it needs to be stored in the Sublime user's packages, let say `sf-build-command.
 
 Then go to `Tools>Build System` and select `sf-build-command`  by default.
 
+**Note:** The `working_dir` property of your build command should point out to the folder where you have your `build.gradle` file, in this case the `build.gradle` file is in the project's root folder.
 
 ### Step 4
 
