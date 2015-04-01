@@ -38,14 +38,13 @@ This is an open source plugin
 ```groovy
    buildscript {
        repositories {
-           mavenLocal()
            mavenCentral()
            maven {
-               url "http://10.31.2.240:8081/artifactory/salesforce"
+                url "https://dl.bintray.com/jalasoft/enforce"
            }
        }
        dependencies {
-           classpath 'org.jalasoft.gradle.plugins.enforce:enforce-gradle-plugin:1.0.7'
+           classpath 'org.jalasoft.gradle.plugins.enforce:enforce-gradle-plugin:1.0.0'
        }
    }
 
@@ -53,12 +52,6 @@ This is an open source plugin
 
    enforce {
        srcPath = 'src'
-       standardObjects = ["Account.object"]
-       poll = 200 //times
-       waitTime = 10 //seg
-       //integration = 'yes'
-       //foldersToDownload = "classes"
-
    }
 ```
 
@@ -86,9 +79,9 @@ This is an open source plugin
 
 <div class="note info">
   <h5>Credential support</h5>
-  <p>Managing credentials can create and update credentials in 'credentials.dat' file it is located in HOME directory, a format was showed in Files gradle that is on last point.</p>
-   <p> Creates a credential in 'credentials.dat' file located in HOME directory it is saved as encrypted by default and its 'sfdcType' field is saved with login value.</p>
-   <p> Updates a credential by key from 'credentials.dat' file.</p>
+  <p>Managing of credentials can create and update credentials in 'credentials.dat' file it is located in HOME directory, a format was showed in Files gradle that is on last point.</p>
+   <p> *'AddCredential task'*creates a credential in 'credentials.dat' file located in HOME directory it is saved as encrypted by default and its 'sfdcType' field is saved with login value by default.</p>
+   <p> *'UpdateCredential task '* updates a credential by key from 'credentials.dat' file.</p>
 </div>
 
 
@@ -96,13 +89,13 @@ This is an open source plugin
 
 ## Project gradle tasks
 
-The gradle project contains tasks that will help on development and packaging. You have to execute the gradle tasks from the project directory it will shows you All tasks runnable from root project.
+The gradle project contains tasks that will help on development and packaging. You have to execute the gradle tasks from the project directory it will show you all tasks runnable from root project.
 
-command:
+Command:
 
 	$ gradle tasks
 	
-output:
+Output:
 
 ### Build Setup tasks
 
