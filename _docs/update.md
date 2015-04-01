@@ -6,7 +6,7 @@ permalink: /docs/update/
 ## Update task
 
 #### **Objective**
-This task just deploys changed code (deleted code, added code and updated code), when you have changed class and a deleted trigger It deletes that trigger and updating the class changed according file tracker.
+This task just deploys changed code as: deleted code, added code and updated code, for example if you changed a class called MyClass.cls and you deleted a trigger called MyTrigger.trigger This deletes MyTrigger.trigger and It updates MyClass.cls according file tracker in your organization.
 
 #### **Parameters**
 This task has two parameters called **excludes** and **folders**. You can choose folder o folders to update it. Also you are able to exclude files by name by folder and using wildcards.
@@ -21,7 +21,7 @@ User can update all files that are listed on file tracker like file changed, del
 
 	$ gradle update
 
-> **Note:** To know more about file tracker see Chapter 4 File Monitor
+> **Note:** This command executed deploys files listed by file tracker to your organization.
 
 #### **Using folders parameter**
 
@@ -34,7 +34,7 @@ User can update files that are within the folder user wants and listed on file t
 
 #### **Using excludes parameter**
 
-User can update all files that are listed on file tracker like file changed, deleted or new one, excluding files, or folders.
+User can update all files that are listed on file tracker like file changed, deleted or new one, excluding files by its name, by folders or using wildcards.
 
 This parameter can exclude files by:
 
@@ -58,7 +58,10 @@ This parameter can exclude files by:
 
 ### without parameters:
 
-In this case four files was changed how to see the next output.
+Scenario:
+
+In this case four files were changed from my local directory (object1__c.object, Page1.page, Trigger1.trigger and Class1.cls) and I want to deploy only files updated to my organization and not all files.
+
 
 command:
 
@@ -76,9 +79,9 @@ output:
     *********************************************
                   Status Files Changed
     *********************************************
-    object1.object - Changed file
-    page1.page - Changed file
-    trigger1.trigger - Changed file
+    Object1__c.object - Changed file
+    Page1.page - Changed file
+    Trigger1.trigger - Changed file
     Class1.cls - Changed file
     *********************************************
 
