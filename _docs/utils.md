@@ -19,7 +19,7 @@ This task executes a code block of Apex using input parameter to set file path o
 
 	$ gradle execute -Pinput="src/classes/ClassOne.cls"
 	
-> **Note:** Input paramerter supports absolute and relative path
+> **Note:** Input parameter supports absolute and relative path
 
 output:
 
@@ -59,7 +59,7 @@ This task executes a code block of Apex using input parameter to set inline code
 	$ gradle execute -Pinput="system.debug('hello world');"
 			 -Poutput=build/hello.txt
 			 
-> **Note:** The output build must exist
+> **Note:** The output path must exist
 output:
 
 ```bash
