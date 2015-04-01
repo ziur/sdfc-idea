@@ -73,7 +73,7 @@ command:
 
 	$ gradle deploy
 
-output
+Output
 
 ```bash
     :deploy
@@ -99,7 +99,7 @@ You can choose folders that will be deployed.
 
 	$ gradle deploy -Pfolders=classes,triggers
 
-output:
+Output:
 
 ```bash
     :deploy
@@ -120,7 +120,7 @@ This command deploys all files from your local respository excluding classes.
 
 	 $ gradle deploy -Pexcludes=classes
 
-output:
+Output:
 
 ```bash
     :deploy
@@ -144,7 +144,7 @@ This command deploys all code excluding Class1.cls
 
 	$ gradle deploy -Pexcludes=classes/Class1.cls
 
-output:
+Output:
 
 ```bash
     :deploy
@@ -167,7 +167,7 @@ This command deploys all code excluding a folder class.
 
 	$ gradle deploy -Pexcludes=classes/**
 
-output:
+Output:
 
 ```bash
     :deploy
@@ -349,7 +349,7 @@ This command uploads all classes all triggers and all objects.
 
 	$ gradle upload -Pfiles=classes/**,triggers,objects
 
-output:
+Output:
 
 ```bash
     :upload
@@ -372,7 +372,7 @@ This commando uploads all files excluding all classes.
 
 	$ gradle upload -Pexcludes=classes
 
-output:
+Output:
 
 ```bash
     > gradle upload
@@ -392,7 +392,7 @@ This command uploads all files excluding Class1.cls
 
 	$ gradle upload -Pexcludes=classes/Class1.cls
 
-output:
+Output:
 
 ```bash
     > gradle upload
@@ -412,7 +412,7 @@ This command uploads all files excluding all classes.
 
 	$ gradle upload -Pexcludes=classes/**
 
-output:
+Output:
 
 ```bash
     > gradle upload
