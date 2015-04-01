@@ -7,7 +7,7 @@ permalink: /docs/undeploy/
 
 #### **Objective**
 
-This task is able to undeploy code from SalesForce organization. To avoid dependency problems It truncates code and it deploys code truncated as first step, after that It deploys code from local repository to SalesForce organization.
+This task is able to undeploy code from SalesForce organization. To avoid dependency problems It truncates code and it deploys code truncated as first step and then It will try to delete all code from Salesforce organization according to your package.xml.
 
 #### **Parameters**
 
