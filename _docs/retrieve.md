@@ -99,11 +99,13 @@ When you use destination parameter you can use relative or absolute path.
 
 Scenario:
 
-command:
+In the case what you want to retrieve all files of classes, objects, triggers, pages, components and staticresources folders.
+
+To cover this scenario you should execute the next command and package.xml should be in your local repository:
 
 	$ gradle retrieve
 
-output:
+Output:
 
 ```bash
     :retrieve
@@ -124,11 +126,15 @@ output:
 
 ### Using files parameter
 
-command:
+Scenario:
 
-	$ gradle retrieve -Pfiles=classes/Class1.cls,triggers/trigger1.trigger
+In the case that you want to retrieve Class1.cls and Trigger1.cls 
+
+Command:
+
+	$ gradle retrieve -Pfiles=classes/Class1.cls,triggers/Trigger1.trigger
 	
-output:
+Output:
 
 
 ```bash
@@ -148,12 +154,16 @@ output:
 
 ### Using destination parameter
 
-command:
+Scenario:
+
+In this case this task will retrieve all pages, Class1.cls and Trigger1.trigger from your organization to relative/path.
+
+Command:
 
 	 $ gradle retrieve -Pfiles=pages,components,classes/Class1.cls,
-	                   triggers/trigger1.trigger -Pdestination=relative/path
+	                   triggers/Trigger1.trigger -Pdestination=relative/path
 
-output:
+Output:
 
 ```bash
     :retrieve
@@ -168,6 +178,10 @@ output:
 
 	BUILD SUCCESSFUL
 ```
+
+Scenario:
+
+When you want to retrieve a file and it doesn't exit in your organization it shows a warning message.
 
 command:
 
@@ -189,6 +203,3 @@ output:
 
     BUILD SUCCESSFUL
 ```
-
->***Note:***
-> If some file has not been founded console will show WARNINGS MESSAGES, for example we can change the name Class1.cls to class1.cls (lowercase).
