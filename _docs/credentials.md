@@ -81,7 +81,7 @@ If you want to update credential by parameters you should use the next parameter
 	 -Ppassword is your password.
 	 -Ptoken is your token.
 
-This is a command:
+Command:
 
 	$ gradle updateCredential -Pid=myId 
 			          -Pusername=user@organization.com
@@ -93,11 +93,11 @@ This is a command:
 
 ### Add credential by console
 
-command:
+Command:
 
 	$ gradle addCredential
 
-output:
+Output:
 
 ```bash
 > Building 0% > :addCredential
@@ -114,14 +114,14 @@ BUILD SUCCESSFUL
 
 ### Add credential by parameters
 
-command:
+Command:
 
 	$ gradle addCredential -Pid=myidLZ 
 			       -Pusername=juana@gmail.com
 			       -Ppassword=123456 
 			       -Ptoken=as:addCredential
 
-output:
+Output:
 
 ```bash
 :addCredential
@@ -132,11 +132,11 @@ BUILD SUCCESSFUL
 
 ### Update credential by console
 
-command:
+Command:
 
 	$ gradle updateCredential
 
-output:
+Output:
 
 ```bash
 :updateCredential
@@ -152,14 +152,14 @@ BUILD SUCCESSFUL
 
 ### Update credential by parameters
 
-command:
+Command:
 
 	$ gradle updateCredential -Pid=myId 
 			          -Pusername=user@organization.com
 		    		  -Ppassword=myPassword 
 		    		  -Ptoken=myToken
 
-output:
+Output:
 
 ```bash
 :updateCredential
