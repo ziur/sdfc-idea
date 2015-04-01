@@ -80,8 +80,8 @@ This is an open source plugin
 <div class="note info">
   <h5>Credential support</h5>
   <p>Managing of credentials can create and update credentials in 'credentials.dat' file it is located in HOME directory, a format was showed in Files gradle that is on last point.</p>
-   <p> *'AddCredential task'*creates a credential in 'credentials.dat' file located in HOME directory it is saved as encrypted by default and its 'sfdcType' field is saved with login value by default.</p>
-   <p> *'UpdateCredential task '* updates a credential by key from 'credentials.dat' file.</p>
+   <p> 'AddCredential task' creates a credential in 'credentials.dat' file located in HOME directory it is saved as encrypted by default and its 'sfdcType' field is saved with login value by default.</p>
+   <p> 'UpdateCredential task ' updates a credential by key from 'credentials.dat' file.</p>
 </div>
 
 
