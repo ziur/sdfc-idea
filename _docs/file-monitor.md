@@ -5,11 +5,11 @@ permalink: /docs/file-monitor/
 ---
 ## File monitor tasks
 
-***Task status*** let's user see what files has been changed as (new file, deleted file and updated file).
+***Status task*** let's user see what files have been changed as (new file, deleted file and updated file).
 
 	$ gradle status
 
-***Task reset*** let's user restarted the file monitor.
+***Reset task*** let's user restarted the file monitor.
 
 	$ gradle reset
 
