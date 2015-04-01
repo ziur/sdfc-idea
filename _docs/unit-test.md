@@ -7,13 +7,13 @@ permalink: /docs/unit-test/
 
 #### **Objective**
 
-This task execute all unit test classes in your organization but it is also possible execute some unit test using wildcards. It generates reports about:
+This task executes all unit test classes in your organization but it is also possible execute some unit test using wildcards. It generates reports about:
 
  * Code coverage report.
  * Unit test report
 
 #### **Parameters**
-This task has two parameters called ***async*** and ***cls*** where the first is used to run test asynchronously another one you can send a wildcard to run this task.
+This task has two parameters called ***async*** and ***cls*** where the first is used to run test asynchronously by default it runs test synchronously another one is used to choose specific test classes using wildcards.
 
 ## Executing RunTest task
 
@@ -26,7 +26,7 @@ Once runTest task is executed without parameters It will execute all test classe
 
 ###  Using a wildcard synchronously
 
- This task runs only unit test classes according to wildcard and It generates XML reports of results obtained from server those reports are saved in ***build/report*** directory.
+This task runs only unit test classes according to wildcard and It generates XML reports of results obtained from server those reports are saved in ***build/report*** directory.
 
 	$ gradle runTest -Pcls=Test*
 
@@ -45,6 +45,10 @@ This task run only unit test classes according to wildcard and it generates XML 
 ## Examples
 
 ###  Using a wildcard synchronously
+
+Scenario:
+
+In this case I want to run test classes that have *'Test'* word in their names and I want to run those unit test synchronously.
 
 command:
 
@@ -78,6 +82,10 @@ BUILD SUCCESSFUL
 ```
 
 ###  Using a wildcard asynchronously
+
+Scenario:
+
+In this case I want to run all test classes and I want to run those unit test asynchronously.
 
 command:
 
