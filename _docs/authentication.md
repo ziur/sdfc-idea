@@ -20,35 +20,42 @@ To use a credential you should use parameter called ***credentialId*** and send 
 ## Forms of authentication
 
 ### Using credential by default
-You are able to run task with a credential by default when you don't write your credential. To do this You should have a credential with ***default*** id.
 
-For example when you run the next task you are using a credential default,  You don't need write *'credentialId'* parameter.
+You are able to run task with a credential by default where you don't need to use ***credentialId*** parameter. To do this You should have a credential with ***default*** id into credentials.dat file.
+
+For example when you run the next task you are using a credential by default,  You don't need write *'credentialId'* parameter.
 
 	$ gradle deploy
 	$ gradle undeploy
 
 ### Using a specific credential
-You are able to run tasks using credential id, in this case I have a credential in *'credentials.dat'* file with an id called *'myId'*
+
+You are able to run tasks using an specific credential, for so you should use ***credentialId*** parameter with your id, in this case there is a credential in *'credentials.dat'* file with an id called *'myId'*
 
 	$ gradle deploy -PcredentialId=myId
 	$ gradle undeploy -PcredentialId=myId
 
 ### Using parameters
+
 You are able to run task using parameters of credential, to do this you should send the next parameter: *username, password and token*.
 
 	$ gradle deploy -Pusername=juan.perez@jalasoft.com
-					-Ppassword=123qweJuan
-					-Ptoken=qweyh65fd43789sw
+			-Ppassword=123qweJuan
+			-Ptoken=qweyh65fd43789sw
 
 ## Examples:
 
 ### Using a credential by default
 
-command:
+Scenario:
+
+In this case if you want to run *'deploy task'* using your credential by default. for so you should have a credential saved into credentials.dat with ***'default'*** id.
+
+Command:
 
 	$ gradle deploy
 
-output:
+Output:
 
 ```bash
     :deploy
@@ -68,11 +75,15 @@ output:
 
 ### Using an specific credential
 
-command:
+Scenario:
+
+In this case I want to run a task using my credential that is saved as *'myId'* id.
+
+Command:
 
 	$ gradle deploy -PcredentialId=myId
 
-output:
+Output:
 
 ```bash
     :deploy
@@ -92,13 +103,17 @@ output:
 
 ### Using parameters
 
-command:
+Scenario:
+
+In this case I want to run *'deploy task'* with my new credential created on Salesforce, it isn't saved in credentials.dat file.
+
+Command:
 
 	$ gradle deploy -Pusername=juan.perez@jalasoft.com
-					-Ppassword=123qweJuan
-					-Ptoken=qweyh65fd43789sw
+			-Ppassword=123qweJuan
+			-Ptoken=qweyh65fd43789sw
 
-output:
+Output:
 
 ```bash
     :deploy
