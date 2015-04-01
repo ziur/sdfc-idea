@@ -52,7 +52,7 @@ Execute Anonymous: }
 BUILD SUCCESSFUL
 ```
 
-### Task execute with inline code and output parameter
+### Execute task with inline code and output parameter
 
 This task executes a code block of Apex using input parameter to set inline code and output parameter to set a file path and get results in this file.
 
