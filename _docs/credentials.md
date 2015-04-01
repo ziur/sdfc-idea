@@ -32,13 +32,14 @@ To management your credentials there are two files called credentials.dat locate
 }
 ```
 
-In this file is saved all credentials with respective fields. It should be located into project directory or user home directory as priority use file that is in project directory.
+In this file are saved all credentials with respective fields. It should be located into project directory or user home directory as priority use file that is in project directory.
 
 ## AddCredential task
 
 This task adds a new credential into credentials.dat located in user home directory. There are two ways to add credentials one is by console another one is by parameters.
 
 ###  By console
+
 You are able to add credentials encrypted and credentials decrypted. If you want to add a credential encrypted you should put option ***y*** in option: ***Encrypt credential(y/n, by default is encrypted):***
 
 To add a new credential you should write the next command:
@@ -63,11 +64,11 @@ The command to add is:
 
 
 ## UpdateCredential  task
-This task update a credential from credentials.dat file located in user home directory.
+This task updates a credential from credentials.dat file located in user home directory.
 
 ### By console
 
-To update a credential by console you should write  the next command and filling credentials fields.
+To update a credential by console you should write  the next command and filling credentials fields by console.
 
 	$ gradle updateCredential
 
