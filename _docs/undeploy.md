@@ -7,11 +7,11 @@ permalink: /docs/undeploy/
 
 #### **Objective**
 
-This task is able to undeploy code from the Salesforce organization. To avoid dependency problems It truncates code and it deploys code truncated as first step and then It will try to delete all code from the Salesforce organization according to the package.xml file of local code.
+This task is able to undeploy code from Salesforce organization. To avoid dependency problems It truncates code and it deploys code truncated as first step and then It will try to delete all code from Salesforce organization according to local code.
 
 #### **Parameters**
 
-This class only have a parameter called ***excludes*** it can be used in as task property or into your build script.
+This class only have a parameter called ***excludes*** it can be used as task property or into your build script.
 
 #### **Interceptors by default**
 
@@ -98,7 +98,7 @@ update {
 #### **Adding custom interceptor**
 To add a new ***interceptor*** you can use interceptor or firstInterceptor methods for each task where you want to add a new custom interceptor.
 
-Adding a new anonymous interceptor, it always will be executed because it doesn't have a specific name.
+Adding a new anonymous interceptor, it will always be executed because it doesn't have a specific name.
 
 ```bash
 undeploy {
