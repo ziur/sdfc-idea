@@ -17,15 +17,21 @@ Enforce is a Gradle plugin, so it is required to have build.gradle file where is
 {% highlight groovy %}
    buildscript {
        repositories {
-           mavenLocal()
            mavenCentral()
+           maven {
+                url "https://dl.bintray.com/jalasoft/enforce"
+           }
        }
        dependencies {
-           classpath 'org.jalasoft.gradle.plugins.enforce:enforce-gradle-plugin:1.0.7'
+           classpath 'org.jalasoft.gradle.plugins.enforce:enforce-gradle-plugin:1.0.0'
        }
    }
    
    apply plugin: 'enforce'
+   
+   enforce {
+     srcPath = 'src'
+   }
 {% endhighlight %}
 
 ## Just a file, where is the program?
@@ -57,14 +63,14 @@ Now, you can configure on Enforce the path of your project code, open your build
 {% highlight groovy %}
 
   enforce {
-    src = 'src'
+    srcPath = 'src'
   }
 {% endhighlight %}
 
 In this case we are assuming the next folder structure for your project:
 {% highlight text %}
 MySalesforceProject
-|- source
+|- src
    |- classes
    |- pages
    |- package.xml
