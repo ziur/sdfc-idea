@@ -10,11 +10,13 @@ Here you can find the enought required information to have running a Gradle proj
 {% highlight groovy %}
    buildscript {
        repositories {
-           mavenLocal()
-           mavenCentral()
+         mavenCentral()
+         maven {
+            url "https://dl.bintray.com/jalasoft/enforce"
+         }
        }
        dependencies {
-           classpath 'org.jalasoft.gradle.plugins.enforce:enforce-gradle-plugin:1.0.7'
+           classpath 'org.jalasoft.gradle.plugins.enforce:enforce-gradle-plugin:1.0.0'
        }
    }
 
