@@ -94,7 +94,12 @@ output:
 
 ### Using folders parameter:
 
-In this example Class1.cls and trigger1.trigger was updated.
+Scenario:
+
+In this case Class1.cls was changed and Class2.cls was deleted, Trigger1.trigger was added and Object1__c.object was changed. and I just want to deploy classes and triggers updated and not the others files changed. 
+
+To cover this scenario you should write the next command:
+
 
 	$ gradle update -Pfolders=classes,triggers
 
@@ -110,8 +115,9 @@ output:
     *********************************************
                   Status Files Changed
     *********************************************
-    trigger1.trigger - Changed file
-    Class1.cls - Changed file
+    Trigger1.trigger - new file
+    Class1.cls - Deleted file
+    Class2.cls - Changed file
     *********************************************
 
     Starting deploy...
@@ -122,11 +128,14 @@ output:
 ```
 
 ### Using excludes parameter:
-In this case Class1.cls and Class2.cls were updated and Class1.cls was excluded.
 
-command:
+Scenario:
 
-	$ gradle update -Pexcludes=**/Class1.cls
+In this case Class1.cls was added, Class2.cls and Class3.cls was deleted and Class4.cls was changed and I want to deploy all classes updated less Class4.cls
+
+To cover this scenario you should use the next command:
+
+	$ gradle update -Pexcludes=**/Class4.cls
 
 output:
 
@@ -141,12 +150,14 @@ output:
     *********************************************
               Status Files Changed
     *********************************************
-    Class2.cls - Changed file
+    Class1.cls - new file
+    Class2.cls - deleted file
+    Class3.cls - deleted file
     *********************************************
     *********************************************
                   Files excluded
     *********************************************
-    Class1.cls -  excluded
+    Class4.cls -  excluded
     *********************************************
     Starting deploy...
     [==================================================]   100%
@@ -155,7 +166,12 @@ output:
     BUILD SUCCESSFUL
 
 ```
-In this example files were updated from classes and objects folders and classes folder was excluded.
+
+Scenario:
+
+In this case classes and obejcts were updated and I just want to deploy objects. 
+
+To cover this scenario you should write the next command:
 
 	$ gradle update -Pexcludes=classes
 
