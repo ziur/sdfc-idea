@@ -6,7 +6,7 @@ permalink: /docs/deployment/
 ## Deploy task
 
 #### **Objective**
-This task deploys all code from your local directory to SalesForce organization, for this as a first step It truncates your code from local repository and deploys those files truncated as second step It deploys your code to SatesForce organization.
+This task deploys all code from your local code to Salesforce organization, for this as a first step It truncates your local code and deploys those files truncated to Salesforce organization, as second step It deploys your local code to SatesForce organization.
 
 
 #### **The idea behind deployment process**
@@ -21,7 +21,7 @@ All code will be deployed to organization using a smart deploy that mean when ex
         <li> Pages</li>
         <li> WorkFlows</li>
     </ul>
-<strong>b) Second step is deploy all code in organization</strong>
+<strong>b) Second step is deploy all local code to your organization</strong>
 </ol>
 
 #### **Parameters**
@@ -67,7 +67,7 @@ User can deploy code excluding some files using **excludes** parameter.
 
 ### Without parameters
 
-Once this task is executed without ***folders*** parameter it deploys all code into an organization.
+Once this task is executed without parameters it deploys all local code to your organization.
 
 command:
 
