@@ -21,7 +21,8 @@ Then disable the Mavesmate `mm_compile_on_save` option. Just open your Mavesmate
 ```
 
 ### Step 3
-Create a build command for your Mavesmate project, it should look something like this.
+Create a build command for your Mavesmate project, it should look something like this. 
+
 
 ```
 {
@@ -34,11 +35,12 @@ Create a build command for your Mavesmate project, it should look something like
 
 it needs to be stored in the Sublime user's packages, let say `sf-build-command.sublime-build` file.
 
-- Windows: %APPDATA%\Sublime Text 3\User\sf-build-command.sublime-build
-- OS X: ~/Library/Application Support/Sublime Text 3/User/sf-build-command.sublime-build
-- Linux: ~/.config/sublime-text-3/user/sf-build-command.sublime-build
+- Windows: %APPDATA%\Sublime Text 3\Packages\User\sf-build-command.sublime-build
+- OS X: ~/Library/Application Support/Sublime Text 3/Packages/User/sf-build-command.sublime-build
+- Linux: ~/.config/sublime-text-3/packages/user/sf-build-command.sublime-build
 
 Then go to `Tools>Build System` and select `sf-build-command`  by default.
+
 
 ### Step 4
 
