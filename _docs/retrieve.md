@@ -181,7 +181,7 @@ Output:
 
 Scenario:
 
-When you want to retrieve a file and it doesn't exit in your organization it shows a warning message.
+When you want to retrieve a file and it doesn't exist in your organization it shows a warning message.
 
 command:
 
