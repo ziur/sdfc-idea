@@ -109,7 +109,7 @@ undeploy {
 
 ```
 
-Adding a new custom interceptor that will execute after than all interceptors on the classes for example.
+Adding a new custom interceptor that will execute after of all interceptors on the classes for example.
 
 ```bash
 undeploy {
@@ -120,7 +120,7 @@ undeploy {
 
 ```
 
-Adding a new custom interceptor that will execute before than all interceptors on the objects for example.
+Adding a new custom interceptor that will execute before of all interceptors on the objects for example.
 
 ```bash
 undeploy {
