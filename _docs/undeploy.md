@@ -7,7 +7,7 @@ permalink: /docs/undeploy/
 
 #### **Objective**
 
-This task is able to undeploy code from SalesForce organization. To avoid dependency problems It truncates code and it deploys code truncated as first step and then It will try to delete all code from Salesforce organization according to your package.xml.
+This task is able to undeploy code from the Salesforce organization. To avoid dependency problems It truncates code and it deploys code truncated as first step and then It will try to delete all code from the Salesforce organization according to the package.xml file of local code.
 
 #### **Parameters**
 
@@ -74,13 +74,13 @@ When the undeploy task is executed all interceptors by default will be executed.
 
 
 #### **Adding global interceptors**
- To add a new global interceptor you can use ***globalInterceptor*** method in the plugin extension "force", it will be visible for all tasks that using the truncated process
+ To add a new global interceptor you can use ***globalInterceptor*** method in the plugin extension "enforce", it will be visible for all tasks that using the truncated process.
 
 ```bash
 
 enforce {
-    globalInterceptor('classes','printClassName', { class->
-        println file.name
+    globalInterceptor('classes','printClassName', { classFile ->
+        println classFile.name
     })
 }
 
@@ -98,34 +98,34 @@ update {
 #### **Adding custom interceptor**
 To add a new ***interceptor*** you can use interceptor or firstInterceptor methods for each task where you want to add a new custom interceptor.
 
-Adding a new anonymous interceptor
+Adding a new anonymous interceptor, it always will be executed because it doesn't have a specific name.
 
 ```bash
 undeploy {
-    interceptor('classes', { file ->
-        println file.path
+    interceptor('classes', { classFile ->
+        println classFile.path
     })
 }
 
 ```
 
-Adding a new custom interceptor that will execute after than all interceptors on the classes
+Adding a new custom interceptor that will execute after than all interceptors on the classes for example.
 
 ```bash
 undeploy {
-    interceptor('classes','doLast', { file ->
-        println file.path
+    interceptor('classes','doLast', { classFile ->
+        println classFile.path
     })
 }
 
 ```
 
-Adding a new custom interceptor that will execute before than all interceptors on the objects
+Adding a new custom interceptor that will execute before than all interceptors on the objects for example.
 
 ```bash
 undeploy {
-    firstInterceptor('objects', 'printFilePath', { file ->
-        println file.name + " " + file.size()
+    firstInterceptor('objects', 'doFirst', { objectFile ->
+        println objectFile.name 
     })
 }
 
