@@ -19,10 +19,12 @@ This task download files from your organization, based in your package xml, if t
 If you don't have a package xml and you want to download only classes and triggers you should use the next task property into your build.gradle:
 
 	foldersToDownload = "classes,triggers"
+	
+>***Note:*** This property only support folders name.
 
 #### **Parameters**
 
-This task have two parameters called ***files*** and ***destination*** , where the first parameter is used to download an specifics files it supports files and folders, another one is used to indicate destination of files that will download.
+This task has two parameters called ***files*** and ***destination*** , where the first parameter is used to download specifics files it supports files and folders, another one is used to indicate destination of files that will download.
 
 ## Executing Retrieve task
 
@@ -34,7 +36,7 @@ Once retrieve task is executed without parameters It uses package xml to retriev
 
 ### Without package xml file
 
-Once retrieve task is executed and there isn't a package xml it retrieve files by default:
+Once retrieve task is executed and there isn't a package xml it retrieves files by default:
 
 * objects
 * staticresources
@@ -46,48 +48,57 @@ Once retrieve task is executed and there isn't a package xml it retrieve files b
 We can set those values for ONLY THE FOLDERS that we want to retrieve.
 The only thing that we have to do is:
 
-* change in the build.gradle file, the line with the next content
-```text
-        //foldersToDownload = "classes,pages"
+* Add in the build.gradle file, the line with the next content.
 ```
- * currently it is commented, quit the comment and leave only
-```text
-        foldersToDownload = "classes,pages"
+	foldersToDownload = "classes,pages"
 ```
- * this means that folders which will be retrieved are classes and pages, yo can add folders as you want to recover them
-```text
+ 
+ * This means that folders which will be retrieved are classes and pages, you can add folders as you want to recover them.
+```
         foldersToDownload = classes,triggers,pages...
 ```
 
 ### Using files parameter
 
-This task retrieve the files that we want retrieve, that means that we can recover a file o many specific files from the organization. This parameter support files and folders.
+This task retrieves the files that we want to retrieve, that means that we can recover a file o many specific files from the organization. This parameter support files and folders.
 
+Files:      
+      
       $ gradle retrieve -Pfiles=classes/Class1.cls
       $ gradle retrieve -Pfiles=classes/Class1.cls,objects/Account.object
+      
+Folders:      
+      
       $ gradle retrieve -Pfiles=objects
       $ gradle retrieve -Pfiles=objects,triggers
+      
+Files and folders:
 
-You can add many files or folders as we want.
+      $ gradle retrieve -Pfiles=objects,classes/Class1.cls
+      $ gradle retrieve -Pfiles=objects,triggers,triggers/Trigger1.trigger,classes/Class1.cls
+      
+You can add many files or many folders as you want also you can use files an folders at the same time.
 
 ### Using destination parameter
 
-This task retrieve the files that we want retrieve and download in specific folder, that means that we can recover a file, folders o many specific files from the organization in specific folder.
+This task retrieves the files that you want to retrieve in a specific folder from your organization.
 
     $ gradle retrieve -Pfiles=classes,objects -Pdestination=relative/path
-    $ gradle retrieve -Pfiles=classes/Class.cls -Pdestination=absolute/path
+    $ gradle retrieve -Pfiles=classes/Class.cls -Pdestination=/absolute/path
 
-When you use a destination parameter you are able to use relative or absolute path.
+When you use destination parameter you can use relative or absolute path.
 
 
 >***Notes:***
->Once that task is executed successfully all the files are copied inside the source folder replacing the existing files.
->If we want recover only the files retrieved we can find them on build folder as a zip file with the name zipRecovered.zip
+>Once that task is executed successfully all the files are copied inside the your local repository replacing the existing files.
+>If you want to see only the files retrieved you can find them on build folder as a zip file with the name zipRecovered.zip
 
 ## Examples
 
-
 ### Without parameters
+
+Scenario:
+
 command:
 
 	$ gradle retrieve
