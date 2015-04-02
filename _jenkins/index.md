@@ -33,5 +33,5 @@ This plugin is a good fit for generating code coverage information of your Sales
 # Features
 
 * It generates code coverage percentage of your organization.
-* It generates a chart about amount of test classes whose code coverage percentage is in ranges defined.
+* A pie chart with amount of test classes whose code coverage percentage is in the ranges that were defined above.
 * It change the build job status to fail according minimum code coverage percentage configured.
