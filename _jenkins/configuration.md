@@ -4,8 +4,6 @@ title: Configuration
 permalink: /jenkins/configuration/
 ---
 
-# Configuration
-
 * Configure the plugin in Jenkins.
     * Select your job.
     * Go to ``Configure`` -> ``Add post-build action``
