@@ -53,7 +53,7 @@ Enforce provides a task for create credentials, which are stored on your home fo
    $ gradle addCredential
 {% endhighlight %}
 
-The task will ask for the credential values to be introduced, the _Id_ represents the key that is used to identify the credential, in this way it is possible to store credentials for several organizations but you need to keep in mind that the _Id_ must be unique. You can find [here](/docs/credentials/) more information about Credential Management.
+The task will ask for the credential values to be introduced, the _Id_ represents the key that is used to identify the credential, in this way it is possible to store credentials for several organizations but you need to keep in mind that the _Id_ must be unique. You can find [here](/sdfc-idea/docs/credentials/) more information about Credential Management.
 
 
 ## Integrate your Salesforce project with Enforce
@@ -78,14 +78,14 @@ MySalesforceProject
   
 {% endhighlight %}
 
-In this case, the _src_ property is pointing to the _source_ folder, which contains the Salesforce project. 
+In this case, the _srcPath_ property is pointing to the _src_ folder, which contains the Salesforce project. 
 
 <div class="note info">
-  <p>Remember that a Salesforce project is the one that contains at least a _package.xml_, and valid Salesforce folders like: classes, objects, etc.</p>
+  <p>Remember that a Salesforce project is the one that contains at least a _package.xml_ , and valid Salesforce folders like: classes, objects, etc.</p>
 </div>
 
 
-By default, the _src_ property points to the build.gradle folder.
+By default, the _srcPath_ property points to the build.gradle folder.
 
 You can list the available tasks provided by Enforce executing:
 {% highlight bash %}
