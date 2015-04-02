@@ -7,7 +7,7 @@
   - usage
   - structure
   - configuration
-  - authentication
+  - auth
   - credentials
   - file-monitor
   - package-management

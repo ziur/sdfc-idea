@@ -24,7 +24,7 @@ To upload your code you should execute Upload task using excludes parameter as:
 
 This command line is using a wildcard, also it supports folders name and files name. This parameter is available to all task less to Retrieve task. Others uses:
 
-To exclude classes:
+To exclude classes and triggers:
 
     $ gradle upload -Pexcludes=classes,triggers -PcredentialId=myId
 
