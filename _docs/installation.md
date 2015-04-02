@@ -81,7 +81,7 @@ MySalesforceProject
 In this case, the _srcPath_ property is pointing to the _src_ folder, which contains the Salesforce project. 
 
 <div class="note info">
-  <p>Remember that a Salesforce project is the one that contains at least a _package.xml_ , and valid Salesforce folders like: classes, objects, etc.</p>
+  <p>Remember that a Salesforce project is the one that contains at least a <em>package.xml</em> , and valid Salesforce folders like: classes, objects, etc.</p>
 </div>
 
 
