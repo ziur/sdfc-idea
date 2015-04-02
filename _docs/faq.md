@@ -31,3 +31,5 @@ To exclude classes:
 To exclude Account.object file:
 
     $ gradle upload -Pexcludes=objects/Account.object -PcredentialId=myId
+
+Also you should use Deploy task for more information see <a href="/sdfc-idea/docs/deployment/" target="_blank">deployment tasks</a>
