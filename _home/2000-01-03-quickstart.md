@@ -45,5 +45,5 @@ enforce {
    #=> Retrieves all the classes from a Salesforce organization
 {% endhighlight %}
 
-Now you can start using all the EnForce features reviwing the [Documentation](/docs/home).
+Now you can start using all the EnForce features reviwing the [Documentation](documentation.html).
 
