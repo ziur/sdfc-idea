@@ -33,8 +33,8 @@ Here you can find the enought required information to have running a Gradle proj
                          -Puser=<USER NAME> 
                          -Ppassword=<PASSWORD> 
                          -Ptoken=<SECURITY TOKEN>
-   Credential id should be saved with 'default' value.
 {% endhighlight %}
+Credential id should be saved with 'default' value.
 
 3. Start executing available commands, for example, retrieve all the classes from the Salesforce Organization
 {% highlight bash %}
