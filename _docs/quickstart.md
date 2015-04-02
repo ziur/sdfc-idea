@@ -12,11 +12,11 @@ Here you can find the enought required information to have running a Gradle proj
        repositories {
          mavenCentral()
          maven {
-            url "https://dl.bintray.com/jalasoft/enforce"
+            url "https://dl.bintray.com/fundacionjala/enforce"
          }
        }
        dependencies {
-           classpath 'org.jalasoft.gradle.plugins.enforce:enforce-gradle-plugin:1.0.0'
+           classpath 'org.fundacionjala.gradle.plugins.enforce:enforce-gradle-plugin:1.0.0'
        }
    }
 
@@ -33,6 +33,7 @@ Here you can find the enought required information to have running a Gradle proj
                          -Puser=<USER NAME> 
                          -Ppassword=<PASSWORD> 
                          -Ptoken=<SECURITY TOKEN>
+   Credential id should be saved with 'default' value.
 {% endhighlight %}
 
 3. Start executing available commands, for example, retrieve all the classes from the Salesforce Organization
