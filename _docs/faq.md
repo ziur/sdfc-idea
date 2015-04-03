@@ -55,20 +55,20 @@ First step import the upload class in your build.gradle file.
 
 Second step create a closure with a file parameter in this case represents each class file in your code.
 
-``` 
+{% highlight groovy linenos=table%}
     def annotation = "@deprecated"
     
     def removeDeprecated = { classFile->
                 classFile.text = classFile.text.replaceAll(annotation, '')
             }
-```
+{% endhighlight %}
 
 Third step create a new task and add the closure created.
 
-``` 
+{% highlight groovy linenos=table%}
 task UploadToRemoveDeprecated(type: Upload){
     interceptor('classes','removeDeprecated', removeDeprecated)
     interceptors = ['removeDeprecated']    
 }
-``` 
+{% endhighlight %}
 For more information visit <a href="/sdfc-idea/docs/undeploy/" target="_blank">undeploy task</a>
