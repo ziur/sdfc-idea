@@ -16,6 +16,8 @@ With the last command line you are able to deploy your code to differents accoun
     $ gradle <TASK NAME ONE> -PcredentialId=<CREDENTIAL ONE>
     $ gradle <TASK NAME TWO> -PcredentialId=<CREDENTIAL TWO>
 
+To more information about credentials management  enter <a href="/sdfc-idea/docs/credentials/" target="_blank">here</a>
+
 ### How can I upload my local code to my organization without a class called 'Class1.cls'?
 
 To upload your code you should execute Upload task using excludes parameter as:
@@ -33,3 +35,11 @@ To exclude Account.object file:
     $ gradle upload -Pexcludes=objects/Account.object -PcredentialId=myId
 
 Also you should use Deploy task for more information see <a href="/sdfc-idea/docs/deployment/" target="_blank">deployment tasks</a>
+
+### Which are difference between upload task and deploy task?
+
+The upload task uploads code from your local repository without truncating code directly as it is. This task is usually used to 'package organization' also It can be used in several organizations.
+
+While that Deploy task to upload code as first step truncate your code and uploads that code, as second step uploads your code to your organization, usually this task is used for development organizations.
+
+For more information visit <a href="/sdfc-idea/docs/deployment/" target="_blank">deployment tasks</a>
