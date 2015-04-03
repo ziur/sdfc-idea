@@ -72,3 +72,7 @@ task UploadToRemoveDeprecated(type: Upload){
 }
 {% endhighlight %}
 For more information visit <a href="/sdfc-idea/docs/undeploy/" target="_blank">undeploy task</a>
+
+### What are tasks supporting interceptors?
+
+The tasks that support interceptors are undeploy, deploy, upload and update.
