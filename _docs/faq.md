@@ -43,3 +43,32 @@ The upload task uploads code from your local repository without truncating code 
 While that Deploy task to upload code as first step truncate your code and uploads that code, as second step uploads your code to your organization, usually this task is used for development organizations.
 
 For more information visit <a href="/sdfc-idea/docs/deployment/" target="_blank">deployment tasks</a>
+
+### How can I create my custom upload task using interceptors?
+
+For example to deploy to development organization We need to remove ``` @deprecated ``` annotation for each class.
+
+First step import the upload class in your build.gradle file.
+``` 
+    import org.fundacionjala.gradle.plugins.enforce.tasks.salesforce.deployment.Upload
+```
+
+Second step create a closure with a file parameter in this case represents each class file in your code.
+
+``` 
+    def annotation = "@deprecated"
+    
+    def removeDeprecated = { file->
+                file.text = file.text.replaceAll(annotation, '')
+            }
+```
+
+Third step add and use the closure created.
+
+``` 
+task UploadToRemoveDeprecate(type: Upload){
+    interceptor('classes','removeDeprecated', removeDeprecated)
+    interceptors = ['removeDeprecated']    
+}
+``` 
+For more information visit <a href="/sdfc-idea/docs/undeploy/" target="_blank">undeploy task</a>
