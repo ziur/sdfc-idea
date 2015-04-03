@@ -65,6 +65,7 @@ All code will be undeployed from SalesForce organization, truncating dependencie
     </li>
 </ol>
 > **Note:**
+> Those interceptors by default are support on upload, deploy, update and undeploy tasks.
 > You are able to create your custom interceptors using ***globalInterceptor*** or ***interceptor***.
 
 
