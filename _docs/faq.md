@@ -58,15 +58,15 @@ Second step create a closure with a file parameter in this case represents each 
 ``` 
     def annotation = "@deprecated"
     
-    def removeDeprecated = { file->
-                file.text = file.text.replaceAll(annotation, '')
+    def removeDeprecated = { classFile->
+                classFile.text = classFile.text.replaceAll(annotation, '')
             }
 ```
 
-Third step add and use the closure created.
+Third step create a new task and add the closure created.
 
 ``` 
-task UploadToRemoveDeprecate(type: Upload){
+task UploadToRemoveDeprecated(type: Upload){
     interceptor('classes','removeDeprecated', removeDeprecated)
     interceptors = ['removeDeprecated']    
 }
