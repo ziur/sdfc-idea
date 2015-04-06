@@ -8,7 +8,7 @@ title: Tutorials
     {% for post in site.posts %}
       <li>
         <h2>
-          <a class="post-link" href="{{ post.url }}">{{ post.title }}</a>
+          <a class="post-link" href="{{ site.url }}{{ post.url }}">{{ post.title }}</a>
         </h2>
       </li>
     {% endfor %}
