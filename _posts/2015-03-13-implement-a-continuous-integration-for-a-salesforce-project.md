@@ -18,11 +18,13 @@ This article tries to show an example of a Gradle build script which implements 
 {% highlight groovy linenos=table%}
 buildscript {
    repositories {
-       mavenLocal()
        mavenCentral()
+       maven {
+            url "https://dl.bintray.com/fundacionjala/enforce"
+       }
    }
    dependencies {
-       classpath 'org.jalasoft.gradle.plugins.enforce:enforce-gradle-plugin:1.0.0'
+       classpath 'org.fundacionjala.gradle.plugins.enforce:enforce-gradle-plugin:1.0.0'
    }
 }
 
