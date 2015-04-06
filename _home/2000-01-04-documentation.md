@@ -13,4 +13,4 @@ Below you have links to most important ones:
   * [Installation](docs/installation/)
   * [Tutorials](tutorials.html)
   * [Development](docs/development/)
-  * [Development](docs/faq/) 
+  * [FAQ](docs/faq/) 
