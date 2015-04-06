@@ -71,7 +71,7 @@ task UploadToRemoveDeprecated(type: Upload){
  interceptors = ['removeDeprecated']    
 }
 {% endhighlight %}
-For more information visit <a href="/sdfc-idea/docs/undeploy/" target="_blank">undeploy task</a>
+For more information visit <a href="/sdfc-idea/docs/undeploy/#undeploy-task-using-interceptors" target="_blank">undeploy task</a>
 
 ### What are tasks supporting interceptors?
 
